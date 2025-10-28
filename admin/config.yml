@@ -1,3 +1,6 @@
+site_url: https://mhasanli.netlify.app
+identity_url: https://mhasanli.netlify.app/.netlify/identity
+
 backend:
   name: git-gateway
   branch: main
@@ -37,3 +40,4 @@ collections:
           - label: "Focus Area 5"
             name: "focus5"
             widget: "string"
+
