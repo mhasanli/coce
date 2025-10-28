@@ -4,9 +4,13 @@ identity_url: https://mhasanli.netlify.app/.netlify/identity
 backend:
   name: git-gateway
   branch: main
+  auth_type: implicit
+  app_id: YOUR_AUTH0_CLIENT_ID
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
+
+publish_mode: editorial_workflow
 
 collections:
   - name: "homepage"
@@ -40,4 +44,3 @@ collections:
           - label: "Focus Area 5"
             name: "focus5"
             widget: "string"
-
