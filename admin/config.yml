@@ -1,11 +1,8 @@
 backend:
-  name: auth0
-  login: https://dev-i2k0warxugefy3ei.us.auth0.com
-  app_id: Z8dnKIkT869N6yn7s9DS9fAjMEUVcxdZ
-  repo: mhasanli/coce
+  name: git-gateway
   branch: main
+  repo: mhasanli/coce
 
-site_url: https://mhasanli.netlify.app
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
