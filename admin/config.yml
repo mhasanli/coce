@@ -1,15 +1,9 @@
-site_url: https://mhasanli.netlify.app
-identity_url: https://mhasanli.netlify.app/.netlify/identity
-
 backend:
   name: git-gateway
   branch: main
-  identity_url: https://mhasanli.netlify.app/.netlify/identity
-  auth:
-    provider: auth0
-    base_url: https://dev-i2k0warxugefy3ei.us.auth0.com
-    app_id: Z8dnKIkT869N6yn7s9DS9fAjMEUVcxdZ
-    client_id: Z8dnKIkT869N6yn7s9DS9fAjMEUVcxdZ
+
+site_url: https://mhasanli.netlify.app
+identity_url: https://mhasanli.netlify.app/.netlify/identity
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
