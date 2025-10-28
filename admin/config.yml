@@ -2,8 +2,8 @@ backend:
   name: auth0
   login: https://dev-i2k0warxugefy3ei.us.auth0.com
   app_id: Z8dnKIkT869N6yn7s9DS9fAjMEUVcxdZ
-  repo: mhasanli/your-repo-name  # ЗАМЕНИ на точное название репозитория GitHub
-  branch: main                  # или другая основная ветка
+  repo: mhasanli/coce
+  branch: main
 
 site_url: https://mhasanli.netlify.app
 media_folder: "images/uploads"
@@ -31,4 +31,13 @@ collections:
             widget: "string"
           - label: "Focus Area 2"
             name: "focus2"
-            widge
+            widget: "string"
+          - label: "Focus Area 3"
+            name: "focus3"
+            widget: "string"
+          - label: "Focus Area 4"
+            name: "focus4"
+            widget: "string"
+          - label: "Focus Area 5"
+            name: "focus5"
+            widget: "string"
