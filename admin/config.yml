@@ -1,0 +1,39 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - file: "index.html"
+        label: "Main Page Content"
+        name: "main_page"
+        fields:
+          - label: "Title"
+            name: "introTitle"
+            widget: "string"
+          - label: "Subtitle"
+            name: "introSubtitle"
+            widget: "string"
+          - label: "Intro Paragraph"
+            name: "introParagraph1"
+            widget: "text"
+          - label: "Focus Area 1"
+            name: "focus1"
+            widget: "string"
+          - label: "Focus Area 2"
+            name: "focus2"
+            widget: "string"
+          - label: "Focus Area 3"
+            name: "focus3"
+            widget: "string"
+          - label: "Focus Area 4"
+            name: "focus4"
+            widget: "string"
+          - label: "Focus Area 5"
+            name: "focus5"
+            widget: "string"
