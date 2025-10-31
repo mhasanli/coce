@@ -1748,35 +1748,35 @@
     <div class="focus-areas">
      <ul class="focus-list" id="focusAreas">
       <li id="focus1" onclick="showFocusTimeline('Support Infrastructure')">Support Infrastructure</li>
-      <li id="focus2" onclick="showFocusTimeline('Customer Journey Optimization')">Customer Journey Optimization</li>
-      <li id="focus3" onclick="showFocusTimeline('Data-Driven Insights')">Data-Driven Insights</li>
-      <li id="focus4" onclick="showFocusTimeline('Team Excellence &amp; Training')">Team Excellence &amp; Training</li>
-      <li id="focus5" onclick="showFocusTimeline('Technology Innovation')">Technology Innovation</li>
+      <li id="focus2" onclick="showFocusTimeline('Service Quality')">Service Quality </li>
+      <li id="focus3" onclick="showFocusTimeline('Product Experience')">Product Experience </li>
+      <li id="focus4" onclick="showFocusTimeline('Client Feedbacks')"> Client Feedbacks</li>
+      <li id="focus5" onclick="showFocusTimeline('Reporting Management')">Reporting Management</li>
      </ul>
     </div>
     <div class="intro-stats">
      <div class="stat-item">
       <div class="stat-number" id="stat1Number">
-       5+
+       60+
       </div>
       <div class="stat-label" id="stat1Label">
-       Years of Growth
+       Projects
       </div>
      </div>
      <div class="stat-item">
       <div class="stat-number" id="stat2Number">
-       100K+
+       50K+
       </div>
       <div class="stat-label" id="stat2Label">
-       Users Reached
+       Client Feedbacks
       </div>
      </div>
      <div class="stat-item">
       <div class="stat-number" id="stat3Number">
-       50+
+       4
       </div>
       <div class="stat-label" id="stat3Label">
-       Team Members
+       Events
       </div>
      </div>
     </div><button onclick="showSummarySection()" class="btn-explore">🚀 Summary of 2025</button> <button onclick="showTeamSection()" class="btn-explore">✨ Our Team</button> <button onclick="toggleIntroEditor()" class="btn-explore">⚙️ Edit This Page</button>
@@ -1818,6 +1818,7 @@
      </div>
     </div>
     <div class="timeline"><!-- Timeline items will be generated here -->
+
     </div>
    </div>
   </div><!-- Summary Editor Panel (Hidden by default) -->
@@ -1911,13 +1912,13 @@
     </div>
     <div class="form-group"><label for="editFocus1">Focus Area 1:</label> <input type="text" id="editFocus1" placeholder="e.g., Support Infrastructure">
     </div>
-    <div class="form-group"><label for="editFocus2">Focus Area 2:</label> <input type="text" id="editFocus2" placeholder="e.g., Customer Journey Optimization">
+    <div class="form-group"><label for="editFocus2">Focus Area 2:</label> <input type="text" id="editFocus2" placeholder="e.g., Service Quality">
     </div>
-    <div class="form-group"><label for="editFocus3">Focus Area 3:</label> <input type="text" id="editFocus3" placeholder="e.g., Data-Driven Insights">
+    <div class="form-group"><label for="editFocus3">Focus Area 3:</label> <input type="text" id="editFocus3" placeholder="e.g., Product Experience">
     </div>
     <div class="form-group"><label for="editFocus4">Focus Area 4:</label> <input type="text" id="editFocus4" placeholder="e.g., Team Excellence &amp; Training">
     </div>
-    <div class="form-group"><label for="editFocus5">Focus Area 5:</label> <input type="text" id="editFocus5" placeholder="e.g., Technology Innovation">
+    <div class="form-group"><label for="editFocus5">Focus Area 5:</label> <input type="text" id="editFocus5" placeholder="e.g., Reporting Management">
     </div><!-- Statistics Section -->
     <div style="border-top: 2px solid #e1e5e9; padding-top: 25px; margin-top: 25px;">
      <h3 style="color: #333; margin-bottom: 15px;">📊 Statistics Section</h3>
@@ -1978,82 +1979,31 @@
    </div>
   </div>
   <script>
-        let timelineData = [
-            {
-                id: 1,
-                date: "January 2020",
-                title: "🚀 The Beginning",
-                description: "Our journey started with a simple idea and a passionate team ready to make a difference in the world.",
-                details: {
-                    objective: "Establish foundation for customer excellence initiative",
-                    keyActions: "Assembled core team, defined vision, and created initial roadmap",
-                    impact: "Set strategic direction for customer-first transformation",
-                    tags: ["Strategy", "Team Building", "Vision"]
-                }
-            },
-            {
-                id: 2,
-                date: "June 2020",
-                title: "💡 First Milestone",
-                description: "Launched our first product and received overwhelming support from early adopters who believed in our vision.",
-                details: {
-                    objective: "Launch minimum viable customer experience platform",
-                    keyActions: "Developed core features, conducted user testing, and implemented feedback loops",
-                    impact: "Achieved 95% customer satisfaction in initial rollout",
-                    tags: ["Product Launch", "User Testing", "Feedback"]
-                }
-            },
-            {
-                id: 3,
-                date: "March 2021",
-                title: "🌟 Growing Team",
-                description: "Expanded our team to 50 talented individuals, each bringing unique skills and perspectives to the table.",
-                details: {
-                    objective: "Scale team capabilities to support growing customer base",
-                    keyActions: "Recruited specialists, implemented training programs, and established team culture",
-                    impact: "Reduced response time by 60% and improved service quality",
-                    tags: ["Hiring", "Training", "Culture"]
-                }
-            },
-            {
-                id: 4,
-                date: "September 2022",
-                title: "🏆 Major Achievement",
-                description: "Reached 100,000 users worldwide and won the Innovation Award for our groundbreaking approach.",
-                details: {
-                    objective: "Achieve significant scale and industry recognition",
-                    keyActions: "Optimized processes, expanded globally, and showcased innovations",
-                    impact: "100K+ users served with 98% satisfaction rate",
-                    tags: ["Scale", "Global", "Innovation", "Awards"]
-                }
-            },
-            {
-                id: 5,
-                date: "Today",
-                title: "🎯 Looking Forward",
-                description: "Continuing to innovate and expand, with exciting new features and partnerships on the horizon.",
-                details: {
-                    objective: "Drive next phase of customer experience evolution",
-                    keyActions: "AI integration, strategic partnerships, and advanced analytics implementation",
-                    impact: "Positioned for 300% growth in customer satisfaction metrics",
-                    tags: ["AI", "Partnerships", "Analytics", "Future"]
-                }
-            }
-        ];
-
         let focusDescriptions = {
             'Support Infrastructure': 'We Analyze, Improve, and Transform Processes and Workflows Across All Support Channels.',
-            'Customer Journey Optimization': 'We Map, Enhance, and Personalize Every Touchpoint in the Customer Experience.',
-            'Data-Driven Insights': 'We Collect, Analyze, and Act on Customer Data to Drive Strategic Decisions.',
-            'Team Excellence & Training': 'We Develop, Certify, and Empower Our Team Members for Outstanding Service.',
-            'Technology Innovation': 'We Research, Develop, and Implement Cutting-Edge Solutions for Better Customer Experience.'
+            'Service Quality': 'We elevate Service Quality across all interaction channels — starting with deep evaluation, continuous improvement, and measurable impact.',
+            'Product Experience': 'We Collect, Analyze, and Act on Customer Data to Drive Strategic Decisions.',
+            'Client Feedbacks': 'We Develop, Certify, and Empower Our Team Members for Outstanding Service.',
+            'Reporting Management': 'We Research, Develop, and Implement Cutting-Edge Solutions for Better Customer Experience.'
         };
 
         let focusTimelineData = {
             'Support Infrastructure': [
                 {
                     id: 101,
-                    date: "Q1 2024",
+                    date: "Q1 asdad",
+                    title: "🏗️ Infrastructure Foundation",
+                    description: "Established robust support infrastructure with 24/7 monitoring and automated response systems.",
+                    details: {
+                        objective: "Build scalable support infrastructure for 24/7 operations",
+                        keyActions: "Implemented monitoring systems, automated workflows, and redundancy protocols",
+                        impact: "99.9% uptime achieved with 50% faster issue resolution",
+                        tags: ["Infrastructure", "Monitoring", "Automation"]
+                    }
+                },
+                                {
+                    id: 999,
+                    date: "Q1 sisisisk",
                     title: "🏗️ Infrastructure Foundation",
                     description: "Established robust support infrastructure with 24/7 monitoring and automated response systems.",
                     details: {
@@ -2065,7 +2015,7 @@
                 },
                 {
                     id: 102,
-                    date: "Q2 2024",
+                    date: "Q2 1111",
                     title: "📞 Call Center Expansion",
                     description: "Expanded our call center capacity by 200% and implemented multilingual support for better customer service.",
                     details: {
@@ -2106,7 +2056,7 @@
                     }
                 }
             ],
-            'Customer Journey Optimization': [
+            'Service Quality': [
                 {
                     id: 201,
                     date: "Q1 2024",
@@ -2144,7 +2094,7 @@
                     }
                 }
             ],
-            'Data-Driven Insights': [
+            'Product Experience': [
                 {
                     id: 301,
                     date: "Q1 2024",
@@ -2182,7 +2132,7 @@
                     }
                 }
             ],
-            'Team Excellence & Training': [
+            'Client Feedbacks': [
                 {
                     id: 401,
                     date: "Q1 2024",
@@ -2207,6 +2157,18 @@
                         tags: ["Certification", "Standards", "Quality"]
                     }
                 },
+                                {
+                    id: 402,
+                    date: "Q2 2024",
+                    title: "🏆 Certification Program",
+                    description: "Launched customer service certification program with 95% team participation and completion rate.",
+                    details: {
+                        objective: "Certify team members in customer excellence standards",
+                        keyActions: "Created certification standards, developed assessments, and launched program",
+                        impact: "95% team certified with measurable improvement in service quality",
+                        tags: ["Certification", "Standards", "Quality"]
+                    }
+                },
                 {
                     id: 403,
                     date: "Q4 2024",
@@ -2220,7 +2182,7 @@
                     }
                 }
             ],
-            'Technology Innovation': [
+            'Reporting Management': [
                 {
                     id: 501,
                     date: "Q1 2024",
@@ -2276,9 +2238,9 @@
                     name: "Voice of Customer",
                     description: "Dedicated to listening, analyzing, and acting on customer feedback to drive continuous improvement.",
                     employees: [
-                        { id: 1, name: "Sarah Johnson", role: "Customer Insights Manager", photo: "" },
-                        { id: 2, name: "Michael Chen", role: "Feedback Analyst", photo: "" },
-                        { id: 3, name: "Emma Rodriguez", role: "Customer Research Specialist", photo: "" }
+                        { id: 1, name: "Mammad Hasanli", role: "Senior Specialist", photo: "" },
+                        { id: 2, name: "Aydan Naghiyeva", role: "Specialist", photo: "" },
+                        { id: 3, name: "Vusal Aghazarli", role: "Analyst", photo: "" }
                     ]
                 },
                 {
@@ -2296,8 +2258,8 @@
                     name: "Quality Assurance & Process Excellence",
                     description: "Ensuring consistent quality standards and driving process improvements across all customer interactions.",
                     employees: [
-                        { id: 7, name: "Rachel Green", role: "Quality Assurance Manager", photo: "" },
-                        { id: 8, name: "Alex Kumar", role: "Process Excellence Analyst", photo: "" },
+                        { id: 7, name: "Adila Mammadova", role: "Quality Assurance Manager", photo: "" },
+                        { id: 8, name: "Jala", role: "Process Excellence Analyst", photo: "" },
                         { id: 9, name: "Maria Santos", role: "Quality Control Specialist", photo: "" }
                     ]
                 }
@@ -3646,355 +3608,79 @@
             updateAdminVisibility();
         });
     </script>
- <script>
-// ===============================
-// OZUNET precise save/restore v3
-// ===============================
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'995033d665fb98f4',t:'MTc2MTU0NzIzMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><!-- OZUNET Simple Full-Page Save/Load -->
+<script>
 document.addEventListener("DOMContentLoaded", () => {
-  // --- fixed sections (intro/summary/team) ---
-  const fixedIds = ["introSection", "summarySection", "teamSection"];
 
-  // Restore fixed sections
-  try {
-    const fixedSaved = JSON.parse(localStorage.getItem("ozunet_sections") || "{}");
-    fixedIds.forEach(id => {
-      const el = document.getElementById(id);
-      if (el && fixedSaved[id]) el.innerHTML = fixedSaved[id];
-    });
-  } catch {}
+  // --- Create floating buttons ---
+  const saveBtn = document.createElement("button");
+  const loadBtn = document.createElement("button");
 
-  // Helper: save fixed sections
-  function saveFixed() {
-    const out = {};
-    fixedIds.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) out[id] = el.innerHTML;
-    });
-    localStorage.setItem("ozunet_sections", JSON.stringify(out));
-    console.log("💾 Saved fixed sections");
-  }
+  Object.assign(saveBtn.style, {
+    position: "fixed", bottom: "20px", right: "160px",
+    zIndex: 9999, padding: "10px 18px",
+    background: "#0d6efd", color: "#fff",
+    border: "none", borderRadius: "8px",
+    cursor: "pointer", fontSize: "15px",
+    boxShadow: "0 3px 6px rgba(0,0,0,0.2)"
+  });
+  saveBtn.textContent = "💾 Download This Page";
 
-  // --- focus timelines (Support Infrastructure, etc.) ---
-  let currentFocus = null;
+  Object.assign(loadBtn.style, {
+    position: "fixed", bottom: "20px", right: "20px",
+    zIndex: 9999, padding: "10px 18px",
+    background: "#28a745", color: "#fff",
+    border: "none", borderRadius: "8px",
+    cursor: "pointer", fontSize: "15px",
+    boxShadow: "0 3px 6px rgba(0,0,0,0.2)"
+  });
+  loadBtn.textContent = "📂 Load Saved Page";
 
-  // Wrap showFocusTimeline to track active focus and restore saved content
-  const origShowFocusTimeline = window.showFocusTimeline;
-  window.showFocusTimeline = function (name) {
-    currentFocus = name;
-    // run original
-    const result = typeof origShowFocusTimeline === "function"
-      ? origShowFocusTimeline.apply(this, arguments)
-      : undefined;
+  document.body.appendChild(saveBtn);
+  document.body.appendChild(loadBtn);
 
-    // after original renders, restore saved timeline (if any)
-    setTimeout(() => {
-      try {
-        const tl = document.querySelector("#timelineSection .timeline");
-        const all = JSON.parse(localStorage.getItem("ozunet_focus") || "{}");
-        if (tl && all && all[name]) {
-          tl.innerHTML = all[name];
-          console.log("↩️ Restored focus timeline:", name);
-        }
-      } catch {}
-    }, 0);
-
-    return result;
-  };
-
-  // Save the active focus timeline only (no empty prefill)
-  function saveActiveFocus() {
-    if (!currentFocus) return;
-    const tl = document.querySelector("#timelineSection .timeline");
-    if (!tl) return;
-    let all = {};
-    try { all = JSON.parse(localStorage.getItem("ozunet_focus") || "{}"); } catch {}
-    all[currentFocus] = tl.innerHTML;
-    localStorage.setItem("ozunet_focus", JSON.stringify(all));
-    console.log("💾 Saved focus timeline:", currentFocus);
-  }
-
-  // Nuke any legacy key that conflicts
-  localStorage.removeItem("introData");
-
-  // --- wrap only real mutating functions ---
-  const fixedActions = [
-    "updateIntroPage","updateSummaryPage","updateTeamPage",
-    "addAchievement","addTeam","addEmployee",
-    "deleteAchievement","deleteTeam","deleteEmployee"
-  ];
-  const focusActions = [
-    "addTimelineItem","updateFocusDescription",
-    "addSupportBlock","updateSupportBlock",
-    "addItem","updateItem","removeItem","deleteTimelineItem","updateDescription"
-  ];
-
-  fixedActions.forEach(fn => {
-    const orig = window[fn];
-    if (typeof orig === "function") {
-      window[fn] = function(...args){
-        const r = orig.apply(this, args);
-        saveFixed();
-        return r;
-      };
+  // --- SAVE the entire current page ---
+  saveBtn.addEventListener("click", () => {
+    try {
+      const fileName = prompt("Enter a name for your file:", "ozunet_page.html");
+      if (!fileName) return;
+      const html = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+      const blob = new Blob([html], { type: "text/html" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = fileName.endsWith(".html") ? fileName : fileName + ".html";
+      a.click();
+      URL.revokeObjectURL(a.href);
+      alert("✅ Page downloaded successfully!");
+    } catch (e) {
+      console.error("Download error:", e);
+      alert("❌ Could not download this page.");
     }
   });
 
-  focusActions.forEach(fn => {
-    const orig = window[fn];
-    if (typeof orig === "function") {
-      window[fn] = function(...args){
-        const r = orig.apply(this, args);
-        // save ONLY the active focus timeline container
-        saveActiveFocus();
-        return r;
-      };
-    }
-  });
+  // --- LOAD a previously saved page (replace everything) ---
+  loadBtn.addEventListener("click", async () => {
+    try {
+      const input = document.createElement("input");
+      input.type = "file";
+      input.accept = ".html";
+      input.click();
 
-  // Manual save shortcut (optional)
-  document.addEventListener("keydown", e => {
-    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "s") {
-      e.preventDefault();
-      saveFixed();
-      saveActiveFocus();
-      alert("💾 Saved locally");
+      input.onchange = async () => {
+        const file = input.files[0];
+        if (!file) return;
+        const text = await file.text();
+        document.open();
+        document.write(text);
+        document.close();
+      };
+    } catch (e) {
+      console.error("Load error:", e);
+      alert("❌ Could not load the file.");
     }
   });
 });
 </script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const fixedIds = ["introSection", "summarySection", "teamSection"];
-  let currentFocus = null;
-
-  // Restore fixed sections
-  try {
-    const f = JSON.parse(localStorage.getItem("ozunet_sections")||"{}");
-    fixedIds.forEach(id=>{
-      const el=document.getElementById(id);
-      if(el&&f[id]) el.innerHTML=f[id];
-    });
-  }catch{}
-
-  function saveFixed(){
-    const out={};
-    fixedIds.forEach(id=>{
-      const el=document.getElementById(id);
-      if(el) out[id]=el.innerHTML;
-    });
-    localStorage.setItem("ozunet_sections",JSON.stringify(out));
-  }
-
-  function saveFocus(){
-    if(!currentFocus) return;
-    const tl=document.querySelector("#timelineSection .timeline");
-    if(!tl) return;
-    let all={};
-    try{all=JSON.parse(localStorage.getItem("ozunet_focus")||"{}");}catch{}
-    all[currentFocus]=tl.innerHTML;
-    localStorage.setItem("ozunet_focus",JSON.stringify(all));
-    console.log("💾 focus saved:",currentFocus);
-  }
-
-  const origShow=window.showFocusTimeline;
-  window.showFocusTimeline=function(name){
-    currentFocus=name;
-    const r=typeof origShow==="function"?origShow.apply(this,arguments):undefined;
-    // after rendering, restore its saved version
-    setTimeout(()=>{
-      const tl=document.querySelector("#timelineSection .timeline");
-      if(!tl) return;
-      try{
-        const all=JSON.parse(localStorage.getItem("ozunet_focus")||"{}");
-        if(all&&all[name]) tl.innerHTML=all[name];
-      }catch{}
-    },0);
-    return r;
-  };
-
-  const fixedFns=["updateIntroPage","updateSummaryPage","updateTeamPage",
-                  "addAchievement","addTeam","addEmployee",
-                  "deleteAchievement","deleteTeam","deleteEmployee"];
-  const focusFns=["addTimelineItem","addSupportBlock","updateSupportBlock",
-                  "addItem","updateItem","removeItem",
-                  "deleteTimelineItem","updateDescription"];
-
-  fixedFns.forEach(fn=>{
-    const o=window[fn];
-    if(typeof o==="function"){
-      window[fn]=function(...a){const r=o.apply(this,a);saveFixed();return r;}
-    }
-  });
-  focusFns.forEach(fn=>{
-    const o=window[fn];
-    if(typeof o==="function"){
-      window[fn]=function(...a){const r=o.apply(this,a);saveFocus();return r;}
-    }
-  });
-
-  document.addEventListener("keydown",e=>{
-    if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="s"){
-      e.preventDefault();saveFixed();saveFocus();alert("💾 Saved locally");
-    }
-  });
-});
-</script>
-
-
-<!-- OZUNET: LocalStorage Persistence Engine v6 (final) -->
-<script>
-(function(){
-  // ======= CONFIG =======
-  const FIXED_IDS = ["introSection","summarySection","teamSection"];
-  const LS_SECTIONS_KEY = "ozunet_sections";
-  const LS_FOCUS_KEY    = "ozunet_focus";
-
-  // ======= UTIL =======
-  const debounce = (fn, ms=250) => {
-    let t; return (...a)=>{ clearTimeout(t); t=setTimeout(()=>fn(...a), ms); };
-  };
-  const log = (...args) => { try{ console.log(...args); }catch(e){} };
-
-  // ======= RESTORE FIXED SECTIONS =======
-  try {
-    const savedFixed = JSON.parse(localStorage.getItem(LS_SECTIONS_KEY) || "{}");
-    FIXED_IDS.forEach(id => {
-      const el = document.getElementById(id);
-      if (el && savedFixed[id]) el.innerHTML = savedFixed[id];
-    });
-  } catch(e){ log("restore fixed err", e); }
-
-  // ======= STATE =======
-  let currentFocus = null;
-  let timelineObserver = null;
-
-  // ======= SAVE HELPERS =======
-  const saveFixed = debounce(() => {
-    const out = {};
-    FIXED_IDS.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) out[id] = el.innerHTML;
-    });
-    localStorage.setItem(LS_SECTIONS_KEY, JSON.stringify(out));
-    log("💾 Saved fixed sections");
-  }, 250);
-
-  const saveActiveFocus = debounce(() => {
-    if (!currentFocus) return;
-    const tl = document.querySelector("#timelineSection .timeline");
-    if (!tl) return;
-    let all = {};
-    try { all = JSON.parse(localStorage.getItem(LS_FOCUS_KEY) || "{}"); } catch {}
-    all[currentFocus] = tl.innerHTML;
-    localStorage.setItem(LS_FOCUS_KEY, JSON.stringify(all));
-    log("💾 Saved focus timeline:", currentFocus, tl.innerHTML.length+" chars");
-  }, 250);
-
-  // ======= RESTORE ONE FOCUS (after render) =======
-  function restoreFocusWhenRendered(focusName){
-    let done = false;
-    const tryRestore = () => {
-      const tl = document.querySelector("#timelineSection .timeline");
-      if (!tl) return false;
-      try {
-        const all = JSON.parse(localStorage.getItem(LS_FOCUS_KEY) || "{}");
-        if (all && all[focusName]) {
-          tl.innerHTML = all[focusName];
-          done = true;
-          log("↩️ Restored focus:", focusName, all[focusName].length+" chars");
-          return true;
-        }
-      } catch(e){}
-      return false;
-    };
-
-    if (tryRestore()) return;
-
-    const container = document.getElementById("timelineSection");
-    if (!container) return;
-    const mo = new MutationObserver(() => {
-      if (!done && tryRestore()) mo.disconnect();
-    });
-    mo.observe(container, { childList:true, subtree:true });
-    setTimeout(() => mo.disconnect(), 2000);
-  }
-
-  // ======= HOOK showFocusTimeline =======
-  const origShow = window.showFocusTimeline;
-  window.showFocusTimeline = function(name){
-    currentFocus = name;
-    const res = (typeof origShow === "function") ? origShow.apply(this, arguments) : undefined;
-    setTimeout(() => restoreFocusWhenRendered(name), 0);
-    setTimeout(() => {
-      const tl = document.querySelector("#timelineSection .timeline");
-      if (!tl) return;
-      if (timelineObserver) { timelineObserver.disconnect(); timelineObserver = null; }
-      timelineObserver = new MutationObserver(saveActiveFocus);
-      timelineObserver.observe(tl, { childList:true, subtree:true, characterData:true });
-    }, 0);
-    return res;
-  };
-
-  // ======= WRAP KNOWN MUTATING FUNCTIONS =======
-  ["updateIntroPage","updateSummaryPage","updateTeamPage",
-   "addAchievement","addTeam","addEmployee",
-   "deleteAchievement","deleteTeam","deleteEmployee"]
-  .forEach(fn => {
-    const o = window[fn];
-    if (typeof o === "function") {
-      window[fn] = function(...args){
-        const r = o.apply(this, args);
-        saveFixed();
-        return r;
-      };
-    }
-  });
-
-  ["addTimelineItem","updateFocusDescription",
-   "addSupportBlock","updateSupportBlock",
-   "addItem","updateItem","removeItem","deleteTimelineItem","updateDescription"]
-  .forEach(fn => {
-    const o = window[fn];
-    if (typeof o === "function") {
-      window[fn] = function(...args){
-        const r = o.apply(this, args);
-        setTimeout(saveActiveFocus, 0);
-        return r;
-      };
-    }
-  });
-
-  // ======= KEYBOARD MANUAL SAVE =======
-  document.addEventListener("keydown", e => {
-    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "s") {
-      e.preventDefault();
-      saveFixed();
-      saveActiveFocus();
-      alert("💾 Saved locally");
-    }
-  });
-
-  // ======= CLEANUP OLD KEYS =======
-  localStorage.removeItem("introData");
-
-  // ======= AUTO-RESTORE SAVED FOCUS DATA ON LOAD =======
-  try {
-    const all = JSON.parse(localStorage.getItem(LS_FOCUS_KEY) || "{}");
-    if (all && Object.keys(all).length) {
-      log("↩️ Detected saved focus timelines:", Object.keys(all).join(", "));
-      const tl = document.querySelector("#timelineSection .timeline");
-      if (tl && all["Support Infrastructure"]) {
-        tl.innerHTML = all["Support Infrastructure"];
-        log("↩️ Auto-restored Support Infrastructure timeline from localStorage");
-      }
-    }
-  } catch(e) {
-    log("auto-restore error", e);
-  }
-
-  log("OZUNET persistence engine v6 loaded");
-})();
-</script>
-<!-- /OZUNET persistence -->
+<!-- /OZUNET Simple Full-Page Save/Load -->
 </body>
 </html>
