@@ -785,14 +785,6 @@
             animation: pulse 2s infinite;
         }
 
-        .timeline-item:nth-child(3n) .timeline-dot {
-            border-color: #dc2626;
-        }
-
-        .timeline-item:nth-child(5n) .timeline-dot {
-            border-color: #ea580c;
-        }
-
         .timeline-date {
             display: inline-block;
             background: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #15803d 100%);
@@ -804,12 +796,13 @@
             margin-bottom: 15px;
         }
 
-        .timeline-item:nth-child(3n) .timeline-date {
-            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
+        /* Alternate red on even items */
+        .timeline-item:nth-child(even) .timeline-dot {
+          border-color: #dc2626;
+          animation: pulseRed 2s infinite;
         }
-
-        .timeline-item:nth-child(5n) .timeline-date {
-            background: linear-gradient(135deg, #ea580c 0%, #c2410c 50%, #9a3412 100%);
+        .timeline-item:nth-child(even) .timeline-date {
+          background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
         }
 
         .timeline-title {
@@ -1983,242 +1976,924 @@
             'Support Infrastructure': 'We Analyze, Improve, and Transform Processes and Workflows Across All Support Channels.',
             'Service Quality': 'We elevate Service Quality across all interaction channels — starting with deep evaluation, continuous improvement, and measurable impact.',
             'Product Experience': 'We Collect, Analyze, and Act on Customer Data to Drive Strategic Decisions.',
-            'Client Feedbacks': 'We Develop, Certify, and Empower Our Team Members for Outstanding Service.',
+            'Client Feedbacks': 'We Listen, Measure, and Transform Customer Feedback into Lasting Improvement',
             'Reporting Management': 'We Research, Develop, and Implement Cutting-Edge Solutions for Better Customer Experience.'
         };
 
         let focusTimelineData = {
             'Support Infrastructure': [
+                
                 {
-                    id: 101,
-                    date: "Q1 asdad",
-                    title: "🏗️ Infrastructure Foundation",
-                    description: "Established robust support infrastructure with 24/7 monitoring and automated response systems.",
+                    id: 100,
+                    date: "Q1 2025",
+                    title: "🔍 Analyzing Current Support Infrastructure",
+                    description: "Conducted an end-to-end analysis of the support ecosystem, covering workflows, systems, and cross-departmental processes across 10+ functional areas.",
                     details: {
-                        objective: "Build scalable support infrastructure for 24/7 operations",
-                        keyActions: "Implemented monitoring systems, automated workflows, and redundancy protocols",
-                        impact: "99.9% uptime achieved with 50% faster issue resolution",
-                        tags: ["Infrastructure", "Monitoring", "Automation"]
+                        objective: "Establish a full understanding of the existing support infrastructure to prepare for large-scale transformation initiatives.",
+                        keyActions: "Conducted a holistic analysis of all support functions, including branch operations, covering 10 critical processes — support workflows, software systems, reporting structures, performance metrics, KPIs, training practices, CRM processes, FAQ management, ticket handling, evaluation mechanisms, and channel structures. This end-to-end review enabled identification of improvement areas and readiness for large-scale transformation.",
+                        impact: "Built a unified view of the support function, enabling data-driven transformation planning and highlighting key improvement areas for efficiency and quality.",
+                        tags: ["Support", "Analysis", "Operations", "Transformation Readiness"]
                     }
                 },
-                                {
-                    id: 999,
-                    date: "Q1 sisisisk",
-                    title: "🏗️ Infrastructure Foundation",
-                    description: "Established robust support infrastructure with 24/7 monitoring and automated response systems.",
+                {
+                    id: 101,
+                    date: "Q1 2025",
+                    title: "📊 Defining KPIs and Metrics Framework",
+                    description: "Established customer-centric KPIs and performance metrics optimized measurement frameworks across all service channels to align business goals with customer impact.",
                     details: {
-                        objective: "Build scalable support infrastructure for 24/7 operations",
-                        keyActions: "Implemented monitoring systems, automated workflows, and redundancy protocols",
-                        impact: "99.9% uptime achieved with 50% faster issue resolution",
-                        tags: ["Infrastructure", "Monitoring", "Automation"]
+                        objective: "Develop and implement customer-focused KPIs that reflect real service impact and drive continuous improvement across all support channels.",
+                        keyActions: "Analyzed historical KPI data, reviewed measurement logic, and aligned performance indicators with both business objectives and customer expectations. Optimized metric definitions, unified dashboards, and introduced transparent evaluation and reporting processes.",
+                        impact: "Created a unified performance measurement system that strengthened data-driven decision-making, improved accountability, and increased the visibility of customer impact across all channels.",
+                        tags: ["KPIs", "Performance", "Measurement", "Customer-Centric"]
                     }
                 },
                 {
                     id: 102,
-                    date: "Q2 1111",
-                    title: "📞 Call Center Expansion",
-                    description: "Expanded our call center capacity by 200% and implemented multilingual support for better customer service.",
+                    date: "Q2 2025",
+                    title: "🧩 Establishing Request Handling Team",
+                    description: "Initiated and co-developed a unified team ( RHT ) — a central hub for managing all inquiries from first-line support, ensuring full visibility and coordinated action across departments.",
                     details: {
-                        objective: "Scale support capacity to handle growing customer base",
-                        keyActions: "Hired 150+ agents, implemented multilingual support, and upgraded phone systems",
-                        impact: "200% capacity increase with support for 12 languages",
-                        tags: ["Scaling", "Multilingual", "Capacity"]
+                        objective: "Create a single center consolidating all tickets to enable holistic visibility, root-cause identification, and cross-functional decision-making.",
+                        keyActions: "Defined the concept and operational logic of the RHT, developed detailed methodologies and technical data infrastructure, designed process logic with process owners, trained employees, provided a roadmap for next phases, and established continuous improvement cycles based on collected data.",
+                        impact: "Reduced average resolution time by 17%, eliminated ticket duplication, introduced clear categorization of inquiry types, and enabled direct process optimization across departments.",
+                        tags: ["Process Optimization", "CX Transformation", "Operational Efficiency"]
                     }
                 },
                 {
                     id: 103,
-                    date: "Q3 2024",
-                    title: "🤖 AI-Powered Support",
-                    description: "Launched AI chatbots that handle 70% of routine inquiries, reducing wait times significantly.",
+                    date: "Q2 2025",
+                    title: "📈 Establishing Unified Reporting Framework",
+                    description: "Built the foundation of a comprehensive reporting infrastructure for all service channels, ensuring unified visibility and consistent performance tracking across the customer ecosystem.",
                     details: {
-                        objective: "Automate routine support tasks using AI technology",
-                        keyActions: "Developed AI chatbots, trained models, and integrated with existing systems",
-                        impact: "70% of inquiries automated, 80% reduction in wait times",
-                        tags: ["AI", "Chatbots", "Automation", "Efficiency"]
+                        objective: "Develop a centralized reporting framework to monitor and analyze all key and customer-related metrics — including AHT, inquiry types, satisfaction scores, ticket volumes, resolution times, and overall channel performance — enabling fully data-driven management.",
+                        keyActions: "Designed the logic and structure of the reporting framework, defined data collection and validation processes, established communication and reporting workflows, and institutionalized monthly performance review routines.",
+                        impact: "Created a single source of truth for all service data, enabling cross-channel insights, early identification of bottlenecks, and proactive performance optimization across customer support operations.",
+                        tags: ["Reporting", "Analytics", "Data Infrastructure", "Performance Tracking"]
                     }
                 },
                 {
                     id: 104,
-                    type: "description",
-                    title: "🗺️ Roadmap for 2026",
-                    text: "Looking ahead to 2026, our focus will be on implementing next-generation support technologies including quantum computing integration, advanced AI predictive models, and immersive AR/VR support experiences."
+                    date: "Q3 2025",
+                    title: "💻 Software Ecosystem Deep Analysis",
+                    description: "Performed a deep-dive analysis of 20+ software systems and their internal operations to map functionality, interdependencies, and optimization opportunities across the support ecosystem.",
+                    details: {
+                       objective: "Provide the CRM development team with a clear, prioritized action plan for system migration — identifying which tools and operations should be unified first within the central CRM platform.",
+                       keyActions: "Analyzed each software’s role, mapped underlying business processes, and applied Lean Six Sigma principles to identify workload inefficiencies. Designed a phased migration roadmap to optimize performance and unify fragmented systems under one CRM environment.",
+                       impact: "Direct impact to all metrics, eliminated redundant operations, and built a scalable foundation for a unified digital ecosystem with improved user experience and data consistency.",
+                       tags: ["Software Analysis", "CRM Migration", "Process Optimization", "Digital Transformation"]
+                    }
+                },
+                    {
+                      id: 105,
+                      date: "Q3 2025",
+                      title: "🏢 Redesigning Branch Qmatic Structure",
+                      description: "Rebuilt the Qmatic menu across all branches from the ground up — analyzing operations, client flow logic, and creating a unified service tree for each branch.",
+                      details: {
+                        objective: "Ensure intuitive client navigation by product and service type, enhance reporting clarity, and reduce waiting times through optimized queue distribution and prioritization.",
+                        keyActions: "Analyzed existing Qmatic setups for every branch, reviewed all operations and client visit data, categorized service topics, and designed an optimized, unified Qmatic tree that improves both customer flow and reporting accuracy.",
+                        impact: "Enabled smarter client distribution, easier in-branch navigation, and more accurate operational reporting, resulting in reduced waiting times and improved customer satisfaction.",
+                        tags: ["Branch Optimization", "Qmatic", "Customer Flow", "Process Design", "CX Improvement"]
+                    }
                 },
                 {
-                    id: 105,
-                    date: "Q1 2026",
-                    title: "🔮 Quantum Support Systems",
-                    description: "Revolutionary quantum-powered support infrastructure providing instant resolution capabilities.",
-                    details: {
-                        objective: "Implement quantum computing for instantaneous support processing",
-                        keyActions: "Deploy quantum processors, develop quantum algorithms, and train quantum-ready team",
-                        impact: "Near-zero response time with 99.99% accuracy in issue prediction",
-                        tags: ["Quantum", "Future Tech", "Innovation"]
+                      id: 106,
+                      date: "Q4 2025",
+                      title: "🏢 Redesigning Branch Qmatic Structure",
+                      description: "Rebuilt the Qmatic menu across all branches from the ground up — analyzing operations, client flow logic, and creating a unified service tree for each branch.",
+                      details: {
+                        objective: "Ensure intuitive client navigation by product and service type, enhance reporting clarity, and reduce waiting times through optimized queue distribution and prioritization.",
+                        keyActions: "Analyzed existing Qmatic setups for every branch, reviewed all operations and client visit data, categorized service topics, and designed an optimized, unified Qmatic tree that improves both customer flow and reporting accuracy.",
+                        impact: "Enabled smarter client distribution, easier in-branch navigation, and more accurate operational reporting, resulting in reduced waiting times and improved customer satisfaction.",
+                        tags: ["Branch Optimization", "Qmatic", "Customer Flow", "Process Design", "CX Improvement"]
                     }
+                },
+                {
+                  id: 107,
+                  date: "Q4 2025",
+                  title: "💬 Establishing Social Media Inquiries Handling",
+                  description: "Implemented a unified process for managing client inquiries across all social media channels by integrating them into a centralized support system.",
+                  details: {
+                    objective: "Enable timely, consistent, and professional responses to client inquiries on social media, improving brand reputation, responsiveness, and customer trust.",
+                    keyActions: "Procured software to connect all social media platforms into a single environment, developed detailed methodologies and operational logic, trained support employees, and established continuous monitoring to identify optimization opportunities.",
+                    impact: "Launched structured social media support, improved response times, strengthened online reputation, and transformed engagement from informal communication to a managed customer service channel.",
+                    tags: ["Social Media", "Process Implementation", "Reputation Management", "Digital Channels"]
+                  }
                 }
+
             ],
             'Service Quality': [
-                {
-                    id: 201,
-                    date: "Q1 2024",
-                    title: "🗺️ Journey Mapping",
-                    description: "Completed comprehensive customer journey mapping across all touchpoints and identified key pain points.",
-                    details: {
-                        objective: "Map and understand complete customer experience journey",
-                        keyActions: "Conducted user interviews, analyzed touchpoints, and identified pain points",
-                        impact: "35% improvement in customer satisfaction scores",
-                        tags: ["Research", "Mapping", "Analysis"]
-                    }
-                },
-                {
-                    id: 202,
-                    date: "Q2 2024",
-                    title: "📱 Mobile Experience",
-                    description: "Redesigned mobile app with 40% faster load times and intuitive navigation based on user feedback.",
-                    details: {
-                        objective: "Optimize mobile experience for better user engagement",
-                        keyActions: "Redesigned UI/UX, optimized performance, and implemented user feedback",
-                        impact: "40% faster load times and 25% increase in mobile engagement",
-                        tags: ["Mobile", "Performance", "UX Design"]
-                    }
-                },
-                {
-                    id: 203,
-                    date: "Q4 2024",
-                    title: "🎯 Personalization Engine",
-                    description: "Implemented AI-driven personalization that increased customer satisfaction by 35%.",
-                    details: {
-                        objective: "Deliver personalized experiences to each customer",
-                        keyActions: "Developed AI algorithms, implemented recommendation engine, and A/B tested features",
-                        impact: "35% increase in customer satisfaction and 20% boost in engagement",
-                        tags: ["AI", "Personalization", "Machine Learning"]
-                    }
-                }
+            {
+              id: 201,
+              date: "04.04.2025",
+              title: "📞 Transition to 3CX for Settlement Client-Facing Teams",
+              description: "Migrated all phone numbers of Settlement client-facing teams to the 3CX communication system, improving call management and enhancing both internal and external communication efficiency.",
+              details: {
+                objective: "Modernize telephony infrastructure to ensure reliability, flexibility, and integration with other digital support tools.",
+                keyActions: "Performed number migration, 3CX configuration, user setup, and activation support for client-facing teams.",
+                impact: "Strengthened communication stability, optimized call and inquiry management, and accelerated digital transformation across Settlement and CIB teams.",
+                tags: ["3CX", "Telephony", "Digital Transformation", "Communication", "Operations"]
+              }
+            },
+            {
+              id: 202,
+              date: "Q1 2025",
+              title: "💱 Cashier Fast Track Service for FX Operations at Port Baku Branch",
+              description: "Introduced a ‘Fast Track’ cashier service for FX operations at the Port Baku branch to reduce waiting times and enhance customer satisfaction.",
+              details: {
+                objective: "Simplify the foreign exchange transaction process and enhance customer satisfaction by providing faster and more efficient service.",
+                keyActions: "Established the Fast Track cashier line, trained staff, adjusted operational systems, and launched the new service process.",
+                impact: "Reduced customer waiting time for FX transactions, improved convenience, and strengthened branch efficiency for high-volume operations.",
+                tags: ["FX Operations", "Service Optimization", "Branch Experience", "Customer Satisfaction"]
+              }
+            },
+            {
+              id: 203,
+              date: "Q1 2025",
+              title: "🏢 Preparation of Supplies for Aghdam and Shusha Branches",
+              description: "Prepared and arranged official supplies, including company stamps and administrative materials, to support the opening and operation of new branches in Aghdam and Shusha.",
+              details: {
+                objective: "Ensure operational readiness and compliance for new branch activations.",
+                keyActions: "Prepared essential branch materials and stamps, verified administrative requirements, and coordinated delivery logistics for both locations.",
+                impact: "Supported the smooth and compliant launch of new branches, strengthening the bank’s regional expansion and service coverage.",
+                tags: ["Branch Operations", "Logistics", "Expansion", "Compliance"]
+              }
+            },
+            {
+              id: 204,
+              date: "01.05.2025",
+              title: "📋 Checklist for Branch Evaluation",
+              description: "Developed and implemented a standardized checklist for assessing branch performance, operations, and compliance with internal policies.",
+              details: {
+                objective: "Ensure consistent and measurable branch evaluations across all locations.",
+                keyActions: "Designed evaluation criteria, developed the checklist, and established the evaluation process for branch managers and supervisors.",
+                impact: "Standardized performance assessment, improved operational consistency, and enhanced branch governance and compliance.",
+                tags: ["Branch Evaluation", "Checklist", "Governance", "Compliance", "Performance"]
+              }
+            },
+            {
+              id: 205,
+              date: "01.05.2025",
+              title: "🏧 Checklist for ATM Evaluation",
+              description: "Introduced a standardized ATM evaluation checklist to monitor functionality, performance, and compliance across all ATM units.",
+              details: {
+                objective: "Strengthen ATM oversight and maintain reliable operations through systematic evaluations.",
+                keyActions: "Developed evaluation criteria, implemented the checklist, and coordinated reviews with Marketing, BPM, and Card Operation teams.",
+                impact: "Improved ATM reliability, standardized evaluations, and reduced operational disruptions.",
+                tags: ["ATM", "Evaluation", "Standardization", "Reliability"]
+              }
+            },
+            {
+              id: 206,
+              date: "10.04.2025",
+              title: "🍽️ Assigning On-Duty Staff During Lunch Hours in Customer-Facing Departments",
+              description: "Implemented on-duty shift assignments during lunch hours to ensure uninterrupted service quality in customer-facing departments.",
+              details: {
+                objective: "Maintain consistent service quality and reduce waiting times during peak hours.",
+                keyActions: "Identified department schedules, assigned on-duty staff, and communicated responsibilities for rotation during lunch breaks.",
+                impact: "Improved customer satisfaction by minimizing service gaps and ensuring operational continuity throughout the day.",
+                tags: ["Customer Service", "Scheduling", "Operational Efficiency"]
+              }
+            },
+            {
+              id: 207,
+              date: "Q1–Q2 2025",
+              title: "🤝 Implementation of the Customer Centricity Project",
+              description: "Collaborated with the Employee Engagement team to strengthen customer relationships and promote a customer-centric culture across the organization.",
+              details: {
+                objective: "Promote a customer-first mindset, improve service quality, and increase customer loyalty.",
+                keyActions: "Shared posts on Yammer to promote customer-oriented initiatives, defined service guidelines, and organized quizzes to raise awareness.",
+                impact: "Enhanced customer experience, strengthened relationships, and supported growth through a customer-focused organizational culture.",
+                tags: ["Customer Centricity", "Engagement", "Culture", "CX Improvement"]
+              }
+            },
+            {
+              id: 208,
+              date: "Q2–Q3 2025",
+              title: "🎓 Organization of Trainings (Compliance, Salary Project, etc.)",
+              description: "Conducted a series of trainings on key operational and regulatory topics to enhance employee knowledge and compliance across departments.",
+              details: {
+                objective: "Strengthen employee knowledge, regulatory adherence, and professional development.",
+                keyActions: "Developed training materials, organized training schedules, and monitored participation and learning outcomes.",
+                impact: "Improved employee competence, ensured compliance with internal and external regulations, and elevated overall performance quality.",
+                tags: ["Training", "Compliance", "Employee Development", "Operational Excellence"]
+              }
+            },
+            {
+              id: 209,
+              date: "Q2 2025",
+              title: "🏦 Optimization of Settlement Team Workflows",
+              description: "Redesigned and optimized workflows within the Settlement Team to improve efficiency, task allocation, and inter-departmental coordination.",
+              details: {
+                objective: "Enhance operational efficiency and streamline settlement processes for faster turnaround and improved accuracy.",
+                keyActions: "Analyzed existing workflows, identified bottlenecks, restructured process steps, and clarified role responsibilities across the team.",
+                impact: "Reduced process delays, improved internal communication, and increased accuracy and productivity within settlement operations.",
+                tags: ["Workflow Optimization", "Settlement", "Operations", "Process Improvement"]
+              }
+            },
+            {
+              id: 210,
+              date: "Q2 2025",
+              title: "📋 Branch Documentation Standardization",
+              description: "Standardized all operational documents used across branches to ensure consistency, accuracy, and regulatory compliance.",
+              details: {
+                objective: "Unify document templates and improve operational accuracy across all branch operations.",
+                keyActions: "Reviewed existing documentation, developed standardized formats, implemented version control, and coordinated updates with relevant departments.",
+                impact: "Ensured consistent information flow, minimized errors, and strengthened compliance with operational standards.",
+                tags: ["Documentation", "Branch Operations", "Compliance", "Standardization"]
+              }
+            },
+            {
+              id: 211,
+              date: "Q2 2025",
+              title: "🧾 Internal Checklist Implementation for Cash Operations",
+              description: "Introduced internal checklists for cash operations to strengthen process discipline and reduce operational errors in branches.",
+              details: {
+                objective: "Ensure process accuracy and reduce operational risks in cash handling and reporting.",
+                keyActions: "Developed detailed checklists for key cash processes, trained employees on usage, and established regular review mechanisms.",
+                impact: "Improved operational precision, reduced error frequency, and ensured compliance with internal cash handling procedures.",
+                tags: ["Cash Operations", "Checklist", "Risk Management", "Process Control"]
+              }
+            },
+            {
+              id: 212,
+              date: "Q2 2025",
+              title: "📈 Frontline Staff KPI Review and Optimization",
+              description: "Reviewed and optimized performance indicators for frontline staff to align KPIs with service quality and customer satisfaction objectives.",
+              details: {
+                objective: "Align frontline performance measurement with customer experience and efficiency goals.",
+                keyActions: "Reviewed existing KPIs, introduced customer-centric indicators, and adjusted targets to promote quality-driven performance.",
+                impact: "Improved service quality, balanced workload distribution, and increased employee motivation through clear and fair performance metrics.",
+                tags: ["KPI", "Performance Management", "Customer Experience", "Optimization"]
+              }
+            },
+            {
+              id: 213,
+              date: "Q3 2025",
+              title: "💡 Qmatic Service Flow Redesign",
+              description: "Redesigned Qmatic service flow in branches to ensure faster customer navigation, balanced workloads, and better service visibility.",
+              details: {
+                objective: "Optimize queue management and improve client navigation experience at branches.",
+                keyActions: "Analyzed client visit data, redesigned Qmatic tree logic, and adjusted branch service allocation for balanced queue distribution.",
+                impact: "Reduced waiting times, improved customer satisfaction, and provided clearer data for performance reporting.",
+                tags: ["Qmatic", "Branch Experience", "Queue Optimization", "CX Improvement"]
+              }
+            },
+            {
+              id: 214,
+              date: "Q3 2025",
+              title: "📊 KPI Reporting Dashboard Design",
+              description: "Developed and implemented a unified dashboard to visualize KPIs across multiple service channels for better transparency and decision-making.",
+              details: {
+                objective: "Centralize performance data visualization to support data-driven management decisions.",
+                keyActions: "Gathered KPI data from all departments, defined key metrics, and developed dashboard templates for ongoing performance tracking.",
+                impact: "Improved transparency in results, accelerated management reporting, and aligned team focus on shared performance goals.",
+                tags: ["Reporting", "KPI", "Dashboard", "Data Visualization"]
+              }
+            },
+            {
+              id: 215,
+              date: "Q3 2025",
+              title: "🧠 Branch Employee Knowledge Assessment",
+              description: "Launched a new system to assess branch employee knowledge on key banking procedures, compliance, and customer service standards.",
+              details: {
+                objective: "Evaluate employee knowledge levels to identify training needs and enhance service quality.",
+                keyActions: "Created assessment questionnaires, conducted testing sessions, and analyzed results to plan targeted training programs.",
+                impact: "Improved employee performance, increased compliance accuracy, and ensured consistent service quality across branches.",
+                tags: ["Training", "Knowledge Assessment", "Compliance", "Branch Operations"]
+              }
+            },
+            {
+              id: 216,
+              date: "Q3 2025",
+              title: "🏦 Front Office Process Optimization",
+              description: "Reviewed and restructured front office operations to improve efficiency, task allocation, and overall customer experience.",
+              details: {
+                objective: "Enhance front office performance and streamline customer-facing operations.",
+                keyActions: "Mapped current processes, identified inefficiencies, redesigned workflows, and standardized procedures across branches.",
+                impact: "Improved service speed, enhanced client satisfaction, and established operational consistency across all front-office teams.",
+                tags: ["Front Office", "Process Optimization", "Customer Experience", "Operations"]
+              }
+            },
+            {
+              id: 217,
+              date: "Q3 2025",
+              title: "💬 Optimization of Customer Feedback Handling Process",
+              description: "Enhanced the customer feedback management process by improving routing, categorization, and follow-up mechanisms to ensure faster resolution and better insight utilization.",
+              details: {
+                objective: "Strengthen feedback management and ensure all client inputs are tracked, analyzed, and acted upon promptly.",
+                keyActions: "Reviewed feedback handling workflows, optimized routing rules, introduced follow-up tracking, and established reporting templates for periodic review.",
+                impact: "Increased feedback resolution rate, improved response quality, and ensured timely identification of recurring customer issues.",
+                tags: ["Customer Feedback", "Process Optimization", "CX Improvement", "Reporting"]
+              }
+            },
+            {
+              id: 218,
+              date: "Q3 2025",
+              title: "📞 Call Center Call Quality Evaluation",
+              description: "Introduced structured evaluation criteria for assessing call quality and service standards across contact center teams.",
+              details: {
+                objective: "Improve service quality and ensure consistency in customer interactions.",
+                keyActions: "Developed quality assessment templates, implemented periodic call monitoring, and established feedback sessions for continuous improvement.",
+                impact: "Enhanced communication standards, increased first-contact resolution, and improved overall customer satisfaction.",
+                tags: ["Call Center", "Quality Evaluation", "Customer Service", "CX Monitoring"]
+              }
+            },
+            {
+              id: 219,
+              date: "Q4 2025",
+              title: "📑 Documentation of the Branch Opening Process",
+              description: "Documented the complete process of opening new branches, including required steps, approvals, and compliance checklists.",
+              details: {
+                objective: "Create a transparent and standardized reference guide for future branch openings.",
+                keyActions: "Outlined each step of the process, validated with stakeholders, and documented approval and compliance flows.",
+                impact: "Simplified future branch openings, ensured alignment across departments, and reduced setup time through structured guidance.",
+                tags: ["Branch Opening", "Documentation", "Compliance", "Standardization"]
+              }
+            },
+            {
+              id: 220,
+              date: "Q4 2025",
+              title: "🏧 ATM Incident Reporting System Optimization",
+              description: "Improved the ATM incident reporting process to ensure faster issue detection, escalation, and resolution.",
+              details: {
+                objective: "Increase ATM uptime and improve client experience by accelerating response to technical incidents.",
+                keyActions: "Reviewed incident reporting workflow, implemented new escalation channels, and optimized monitoring and communication between relevant teams.",
+                impact: "Reduced ATM downtime, improved issue visibility, and strengthened collaboration between technical and operational teams.",
+                tags: ["ATM", "Incident Management", "Process Optimization", "Operational Efficiency"]
+              }
+            },
+            {
+              id: 221,
+              date: "Q4 2025",
+              title: "💼 Salary Card Delivery and Verification Optimization",
+              description: "Redesigned the salary card delivery and verification process to minimize manual work and improve turnaround times.",
+              details: {
+                objective: "Enhance operational efficiency in salary card distribution and ensure accurate verification.",
+                keyActions: "Simplified workflows, automated key verification steps, and implemented a unified tracking log for deliveries.",
+                impact: "Reduced manual intervention, shortened delivery timelines, and improved customer experience for corporate clients.",
+                tags: ["Salary Card", "Process Improvement", "Automation", "Operational Efficiency"]
+              }
+            },
+            {
+              id: 222,
+              date: "Q4 2025",
+              title: "📊 Branch Performance Dashboard Creation",
+              description: "Developed a visual dashboard to track and compare performance metrics across all branches for better decision-making and transparency.",
+              details: {
+                objective: "Enable data-driven performance tracking and benchmarking of branch operations.",
+                keyActions: "Collected branch KPI data, created visualization dashboards, and integrated comparative analytics for regional management.",
+                impact: "Improved branch visibility, empowered managers with actionable insights, and fostered healthy performance competition across the network.",
+                tags: ["Branch Reporting", "Dashboard", "Analytics", "Performance Tracking"]
+              }
+            },
+            {
+              id: 223,
+              date: "Q4 2025",
+              title: "🧾 Establishment of Branch Audit Preparation Guidelines",
+              description: "Created standardized audit preparation guidelines for branches to ensure readiness, compliance, and process accuracy during internal audits.",
+              details: {
+                objective: "Support branches in meeting audit requirements efficiently and consistently.",
+                keyActions: "Outlined audit preparation steps, designed self-check templates, and trained branch leads on audit readiness procedures.",
+                impact: "Improved audit results, reduced non-conformities, and strengthened operational compliance across the branch network.",
+                tags: ["Audit", "Compliance", "Branch Operations", "Governance"]
+              }
+            }
             ],
             'Product Experience': [
-                {
-                    id: 301,
-                    date: "Q1 2024",
-                    title: "📊 Analytics Platform",
-                    description: "Built comprehensive analytics platform to track customer behavior and satisfaction metrics in real-time.",
-                    details: {
-                        objective: "Create unified analytics platform for data-driven decisions",
-                        keyActions: "Built data pipeline, created dashboards, and implemented real-time tracking",
-                        impact: "100% visibility into customer metrics with real-time insights",
-                        tags: ["Analytics", "Data Pipeline", "Real-time"]
-                    }
+            {
+              id: 301,
+              date: "Q1 2025",
+              title: "💳 Payment HUB’s Flows",
+              description: "Optimization of the Payment HUB’s customer support process for the PB Settlement team, focusing on improving 'on hold' payment scenarios, reducing manual interventions, and minimizing settlement delays.",
+              details: {
+                objective: "Ensure faster and error-free processing of payments held for validation or compliance checks.",
+                keyActions: "Mapped current 'on hold' payment flow; identified bottlenecks; simplified approval hierarchy; automated notifications; implemented SLA visibility for hold cases.",
+                impact: "Higher customer satisfaction with transparent processing and reduced manual coordination between units.",
+                tags: ["Payment HUB", "Process Optimization", "Automation", "CX Improvement"]
+              }
+            },
+            {
+              id: 302,
+              date: "Q1 2025",
+              title: "🗺️ Customer Journey Map for Digital Standard Loan (DSL)",
+              description: "Developed an end-to-end Customer Journey Map (CJM) for the Digital Standard Loan product (up to 250K AZN) under the Customer First initiative, covering the full online credit application and approval flow.",
+              details: {
+                objective: "Visualize the customer experience across all touchpoints to identify friction points and improvement opportunities.",
+                keyActions: "Conducted stakeholder and customer interviews; mapped all stages from awareness to post-disbursement; identified pain points; delivered visual CJM for Customer First showcase.",
+                impact: "Enhanced understanding of SME customer needs, improved CX backlog alignment, and increased NPS and conversion rates in the loan funnel.",
+                tags: ["CJM", "Digital Loan", "SME", "CX Mapping"]
+              }
+            },
+            {
+              id: 303,
+              date: "Q1 2025",
+              title: "📊 Local Benchmark for Digital Standard Loan",
+              description: "Executed a local benchmark comparing online credit application journeys (up to 250K AZN) for SME segments across leading Azerbaijani banks.",
+              details: {
+                objective: "Identify best practices and performance gaps in PAŞA Bank’s DSL process versus market competitors.",
+                keyActions: "Analyzed 5 major banks’ loan application processes; reviewed documentation and approval timelines; prepared visual benchmark dashboard with scoring.",
+                impact: "Defined improvement roadmap for DSL based on market standards, strengthened competitive positioning, and accelerated enhancements under Customer First.",
+                tags: ["Benchmarking", "DSL", "SME", "Customer First"]
+              }
+            },
+            {
+              id: 304,
+              date: "Q1 2025",
+              title: "⚙️ New Automated B2B Onboarding Flow",
+              description: "Created a fully digital onboarding process for new B2B clients — from data entry to account activation and product package selection.",
+              details: {
+                objective: "Reduce manual onboarding time and enable 100% remote client acquisition.",
+                keyActions: "Designed online registration interface with e-signature and e-document validation; implemented fully automated approval and welcome flow.",
+                impact: "Reduced workload for RM and Operations teams and improved first-impression experience for new SME clients.",
+                tags: ["B2B Onboarding", "Automation", "Digital Banking", "CX Efficiency"]
+              }
+            },
+            {
+              id: 305,
+              date: "Q1 2025",
+              title: "📄 New Automated Tender Guarantee Request Flow",
+              description: "Developed a fully digital Tender Guarantee application process within Online Banking — covering request initiation, validation, and document issuance.",
+              details: {
+                objective: "Simplify and accelerate Tender Guarantee issuance for SME clients participating in public tenders.",
+                keyActions: "Created online request interface; integrated auto-validation of limits and creditworthiness; implemented e-signature and automated letter generation.",
+                impact: "Reduced processing time from days to hours, increased usage of PAŞA Bank guarantees among SMEs, and improved digital adoption.",
+                tags: ["Tender Guarantee", "Automation", "SME", "Digital Banking"]
+              }
+            },
+            {
+              id: 306,
+              date: "Q1 2025",
+              title: "📈 NPS Collection & Detractor Recovery Program",
+              description: "Collected 6,764 NPS responses from SME clients across non-credit products and developed a targeted recovery plan for 1,164 detractors.",
+              details: {
+                objective: "Enhance satisfaction through detractor analysis and data-driven improvements.",
+                keyActions: "Launched monthly NPS surveys via OB; segmented detractors by product and reason; conducted root-cause workshops; created recovery roadmap.",
+                impact: "Achieved 1–6 point NPS improvement; improved retention and reduced churn; strengthened CX culture across SME business lines.",
+                tags: ["NPS", "Detractor Recovery", "SME", "CX Analytics"]
+              }
+            },
+            {
+              id: 307,
+              date: "Q1 2025",
+              title: "📬 Automation of Customer Emails for SME Support Team",
+              description: "Automated frequently used SME Support email templates and processes by migrating them into CRM Flex modules to streamline customer communication.",
+              details: {
+                objective: "Reduce manual response time and increase standardization and quality of communication.",
+                keyActions: "Analyzed incoming cases; categorized top scenarios; automated repetitive workflows; introduced analytics for email KPIs.",
+                impact: "Reduced average response time from 8 hours to 1 hour; improved communication consistency; increased reporting and operational visibility.",
+                tags: ["Automation", "CRM Flex", "SME Support", "Operational Efficiency"]
+              }
+            },
+            {
+              id: 308,
+              date: "Q1 2025",
+              title: "🏦 M10 QR Payment Flow Migration to Kapital Bank",
+              description: "Migrated the M10 QR Payment flow from PAŞA Bank’s infrastructure to Kapital Bank’s ecosystem to ensure uninterrupted service continuity.",
+              details: {
+                objective: "Guarantee uninterrupted QR payment service for merchants and customers during migration.",
+                keyActions: "Mapped existing M10 flow; aligned APIs and merchant setup; completed integration testing for POS, mobile app, and settlements.",
+                impact: "Zero downtime during migration, continuous service for 10K+ QR users, and improved interoperability between local banks.",
+                tags: ["M10", "QR Payments", "Integration", "Banking Infrastructure"]
+              }
+            },
+            {
+              id: 309,
+              date: "Q1 2025",
+              title: "💳 New Caspos Project",
+              description: "Integrated PAŞA Bank’s mPOS functionality into Caspos terminals to expand merchant payment acceptance channels and strengthen the acquiring network.",
+              details: {
+                objective: "Broaden PAŞA Bank’s SME acquiring ecosystem and increase payment transaction coverage.",
+                keyActions: "Integrated mPOS APIs with Caspos; executed pilot with selected merchants; defined commercial model and GTM plan.",
+                impact: "Expanded POS acceptance network, increased transaction volume, and enhanced customer convenience through ecosystem synergy.",
+                tags: ["Caspos", "mPOS", "Acquiring", "Digital Payments"]
+              }
+            },
+            {
+              id: 310,
+              date: "Q2 2025",
+              title: "📊 NPS Development for B2B Payments",
+              description: "Designed and implemented a new NPS measurement methodology for B2B Payment products, integrated across Online Banking (OB) and email communication channels.",
+              details: {
+                objective: "Enable consistent and automated NPS collection to measure satisfaction and service quality for SME payment users.",
+                keyActions: "Developed NPS survey logic and sampling criteria; integrated automated triggers in OB and email; established analytics dashboards for monitoring feedback trends.",
+                impact: "Achieved NPS score of 60%, improved feedback loop visibility, and strengthened voice-of-customer insights for payment services.",
+                tags: ["NPS", "B2B Payments", "Automation", "CX Analytics"]
+              }
+            },
+            {
+              id: 311,
+              date: "Q2 2025",
+              title: "📘 Research and Analysis of Re-Finance Product (Part 1)",
+              description: "Initiated the research phase for the Re-Finance product, focusing on analysis of credit application flows for customers holding multiple business loans across different banks.",
+              details: {
+                objective: "Identify friction points and opportunities to simplify the refinancing journey for SME clients.",
+                keyActions: "Mapped current customer application paths; collected user feedback on multi-loan experiences; benchmarked refinance offers and processes across competitors.",
+                impact: "Supported development of a new onboarding strategy for refinancing clients, improved customer satisfaction (CSI), and prepared input for Part 2 product design.",
+                tags: ["Re-Finance", "SME", "Research", "Process Improvement"]
+              }
+            },
+            {
+              id: 312,
+              date: "Q2 2025",
+              title: "🚨 Arrest Flow CX Analysis",
+              description: "Conducted a comprehensive end-to-end analysis of customer experience in handling account arrest cases from notification to resolution.",
+              details: {
+                objective: "Redesign the arrest management process to ensure faster communication, reduced escalation, and proactive customer guidance.",
+                keyActions: "Collected real customer cases; mapped 'as-is' flow; identified pain points with Legal, Operations, and Customer Support; proposed customer-oriented 'to-be' model.",
+                impact: "Increased active customer retention and improved NPS by addressing one of the most sensitive experience pain points in business banking.",
+                tags: ["Arrest Flow", "CX Analysis", "Customer Retention", "Process Redesign"]
+              }
+            },
+            {
+              id: 313,
+              date: "Q2 2025",
+              title: "📈 CSI Development for All Credit Products",
+              description: "Created a unified Customer Satisfaction Index (CSI) methodology covering all credit products, integrated into OB and visualized via a live Grafana dashboard.",
+              details: {
+                objective: "Enable continuous CSI tracking to measure satisfaction by product, segment, and journey stage.",
+                keyActions: "Designed CSI question set and scoring logic; automated survey triggers per credit stage; built live Grafana dashboard for real-time visualization.",
+                impact: "Achieved CSI 60%, established continuous monitoring framework, and empowered squads to act on real-time feedback.",
+                tags: ["CSI", "Credit Products", "Grafana", "CX Monitoring"]
+              }
+            },
+            {
+              id: 314,
+              date: "Q2 2025",
+              title: "📊 NPS Collection & Detractor Analysis (5,929 Respondents)",
+              description: "Collected 5,929 SME NPS responses and created an improvement action plan for 1,009 detractors across non-credit products.",
+              details: {
+                objective: "Measure satisfaction and drive detractor recovery to sustain high-quality SME experience.",
+                keyActions: "Launched automated NPS surveys via OB and email; analyzed detractor data by product and issue; conducted root-cause workshops; built targeted recovery roadmap.",
+                impact: "Reached NPS 60%, improved retention and loyalty, and established a continuous cycle for CX improvement actions.",
+                tags: ["NPS", "SME", "CX Analytics", "Recovery Program"]
+              }
+            },
+            {
+              id: 315,
+              date: "Q2 2025",
+              title: "📂 New Account Plan in CRM (All Flows)",
+              description: "Digitized and optimized Relationship Managers’ (RM) yearly and quarterly account planning process through CRM automation.",
+              details: {
+                objective: "Streamline planning workflow, centralize account tracking, and improve sales forecasting accuracy.",
+                keyActions: "Mapped current RM planning process; automated data input templates; integrated KPIs and forecasting dashboards within CRM.",
+                impact: "Reduced sales forecast preparation time by at least 50% and enhanced planning transparency across business units.",
+                tags: ["CRM", "Automation", "RM Process", "Planning Efficiency"]
+              }
+            },
+            {
+              id: 316,
+              date: "Q2 2025",
+              title: "💬 Live Chat-Bot Discovery (RocketChat Vendor)",
+              description: "Conducted discovery and benchmarking for a new live chat-bot solution provided by RocketChat, evaluating customer-side flows and integration potential.",
+              details: {
+                objective: "Assess feasibility and design requirements for implementing an omni-channel chat-bot for SME support and product inquiries.",
+                keyActions: "Benchmarked international and local chat-bot solutions; analyzed customer use cases; evaluated vendor demo and OB integration requirements.",
+                impact: "Prepared roadmap for chat-bot implementation improving NPS, CSI, and active customer engagement through faster digital support.",
+                tags: ["Chatbot", "RocketChat", "CX Automation", "Digital Support"]
+              }
+            },
+            {
+              id: 317,
+              date: "Q3 2025",
+              title: "💡 New NPS Development for VAS Products (Business Innovation Cluster)",
+              description: "Created a dedicated NPS methodology for the Value-Added Services (VAS) product line under the Business Innovation Cluster, integrated within OB.",
+              details: {
+                objective: "Establish a unified feedback framework to track customer sentiment and adoption levels for new digital VAS offerings.",
+                keyActions: "Deployed NPS surveys inside OB; automated data collection; created dashboards for reporting.",
+                impact: "Achieved NPS 60%, improving product perception and providing measurable insight into customer experience across innovative digital services.",
+                tags: ["VAS", "NPS", "Digital Services", "Innovation Cluster"]
+              }
+            },
+            {
+              id: 318,
+              date: "Q3 2025",
+              title: "🏦 Deposit Flow AS-IS & TO-BE Analysis for Street Customers",
+              description: "Conducted end-to-end analysis and optimization of the deposit account opening journey for retail 'street' customers.",
+              details: {
+                objective: "Define current (AS-IS) and improved (TO-BE) deposit flow to increase efficiency and enhance customer experience.",
+                keyActions: "Mapped existing deposit flow; conducted customer journey workshops; proposed TO-BE process model aligned with Retail operations.",
+                impact: "Increased net income through higher conversion, reduced branch SLA, and enabled faster onboarding of new retail customers.",
+                tags: ["Deposit Flow", "Retail", "Journey Mapping", "Process Optimization"]
+              }
+            },
+            {
+              id: 319,
+              date: "Q3 2025",
+              title: "🧭 Onboarding Support Flow in CRM",
+              description: "Developed an end-to-end onboarding support flow within CRM to track and manage onboarding status for SME and CIB clients.",
+              details: {
+                objective: "Ensure visibility and coordination across support, RM, and product teams.",
+                keyActions: "Mapped onboarding statuses; created automated CRM workflows; introduced tracking dashboards for performance.",
+                impact: "Improved NPS through transparent onboarding communication and accelerated activation of new customers.",
+                tags: ["CRM", "Onboarding", "Automation", "CX Process"]
+              }
+            },
+            {
+              id: 320,
+              date: "Q3 2025",
+              title: "📑 Performance and Advance Payment LG Flow",
+              description: "Designed and developed automated application flows for Performance and Advance Payment Letter of Guarantee (LG) products in Online Banking.",
+              details: {
+                objective: "Simplify guarantee request processes for SME clients and increase digital LG adoption.",
+                keyActions: "Created structured LG application forms; automated credit and risk checks; integrated approval logic and digital document generation.",
+                impact: "Achieved 50% adoption of SME performance and advance payment guarantees, strengthening digital trade finance usage.",
+                tags: ["Letter of Guarantee", "SME", "Automation", "Digital Trade Finance"]
+              }
+            },
+            {
+                  id: 321,
+                  date: "Q3 2025",
+                  title: "💼 Salary Project in Tariffim",
+                  description: "Integrated Salary Card and Payments modules into the existing Tariffim product bundle to expand SME payroll service capabilities.",
+                  details: {
+                    objective: "Increase Tariffim product adoption and promote bundled usage for business clients.",
+                    keyActions: "Developed new Tariffim bundle architecture; integrated payroll APIs; aligned front-end UX and pricing logic.",
+                    impact: "Growth in the number of active Tariffim users and higher cross-sell penetration within SME portfolio.",
+                    tags: ["Tariffim", "Payroll", "Bundle", "SME", "Digital Services"]
+                  }
                 },
                 {
-                    id: 302,
-                    date: "Q2 2024",
-                    title: "🔍 Predictive Analytics",
-                    description: "Deployed machine learning models to predict customer needs and proactively address issues.",
-                    details: {
-                        objective: "Predict and prevent customer issues before they occur",
-                        keyActions: "Trained ML models, implemented prediction algorithms, and created alert systems",
-                        impact: "60% reduction in customer complaints through proactive intervention",
-                        tags: ["Machine Learning", "Prediction", "Proactive"]
-                    }
+                  id: 322,
+                  date: "Q3 2025",
+                  title: "🗂️ Sprint Planning Automation in CRM",
+                  description: "Fully automated daily and sprint planning processes for key personas (TF, RM, CA, SA, CL) within CRM to enhance operational visibility.",
+                  details: {
+                    objective: "Digitize team task management, increase collaboration efficiency, and enable performance analytics.",
+                    keyActions: "Designed persona-based dashboards; integrated task automation rules; deployed real-time sprint tracking widgets.",
+                    impact: "Boosted MAU and DAU within CRM; improved productivity and CSI through transparent, data-driven task management.",
+                    tags: ["CRM", "Automation", "Sprint Planning", "Operational Efficiency"]
+                  }
                 },
                 {
-                    id: 303,
-                    date: "Q3 2024",
-                    title: "📈 Performance Dashboard",
-                    description: "Launched executive dashboard providing real-time insights into customer experience metrics.",
-                    details: {
-                        objective: "Provide leadership with real-time customer experience insights",
-                        keyActions: "Designed executive dashboard, integrated KPIs, and automated reporting",
-                        impact: "Leadership decisions now 50% faster with real-time data access",
-                        tags: ["Dashboard", "Executive", "KPIs"]
-                    }
+                  id: 323,
+                  date: "Q3 2025",
+                  title: "📈 NPS Collection & Detractor Action Plan (2,634 Respondents)",
+                  description: "Collected 2,634 NPS responses across SME and Retail products and developed targeted recovery actions for 451 detractors.",
+                  details: {
+                    objective: "Strengthen customer loyalty by systematically addressing negative feedback and improving product experience.",
+                    keyActions: "Automated NPS survey scheduling; categorized detractor feedback; implemented recovery communication plans; monitored post-action results.",
+                    impact: "Sustained NPS 60%, increased promoter share, and deepened insight into customer satisfaction trends.",
+                    tags: ["NPS", "SME", "Retail", "Feedback Analysis"]
+                  }
+                },
+                {
+                  id: 324,
+                  date: "Q3 2025",
+                  title: "💬 CSI Collection & Detractor Action Plan (2,070 Respondents)",
+                  description: "Collected 2,070 CSI responses for all credit products and designed an improvement plan for 130 detractors.",
+                  details: {
+                    objective: "Enhance credit product satisfaction through continuous measurement and focused improvement initiatives.",
+                    keyActions: "Implemented automated CSI survey triggers; analyzed results by product type; facilitated action workshops with product squads.",
+                    impact: "Achieved CSI 60%, reduced dissatisfaction drivers, and enabled ongoing performance tracking through Grafana dashboards.",
+                    tags: ["CSI", "Credit Products", "Automation", "Grafana"]
+                  }
+                },
+                {
+                  id: 325,
+                  date: "Q4 2025",
+                  title: "📊 NPS Implementation for Tariffim",
+                  description: "Developed and launched a new NPS measurement framework for the Tariffim product, fully integrated into the Online Banking (OB) platform to assess SME user satisfaction.",
+                  details: {
+                    objective: "Establish continuous NPS tracking for Tariffim to evaluate service quality and identify improvement areas.",
+                    keyActions: "Designed NPS survey logic; integrated triggers in OB; built automated dashboard for result monitoring and reporting.",
+                    impact: "Achieved NPS 60%, improved product perception, and strengthened feedback-driven decision-making for Tariffim enhancements.",
+                    tags: ["Tariffim", "NPS", "SME", "Digital Experience"]
+                  }
+                },
+                {
+                  id: 326,
+                  date: "Q4 2025",
+                  title: "⚡ IPS Payment Execution Flow Development",
+                  description: "Designed and implemented the Instant Payment System (IPS) execution flow to enhance customer experience and transaction speed within Online Banking.",
+                  details: {
+                    objective: "Enable seamless and real-time payment execution for retail and SME customers.",
+                    keyActions: "Mapped current IPS journey; developed optimized execution logic; integrated real-time notifications and performance tracking.",
+                    impact: "Improved NPS through faster transaction experience and increased active customer numbers via higher digital payment usage.",
+                    tags: ["IPS", "Payments", "Digital Banking", "CX Improvement"]
+                  }
+                },
+                {
+                  id: 327,
+                  date: "Q4 2025",
+                  title: "🌍 UnionPay Integration",
+                  description: "Executed the UnionPay acceptance process across PAŞA Bank POS terminals, expanding international payment coverage and merchant services.",
+                  details: {
+                    objective: "Enhance VAS offerings by enabling merchants to accept UnionPay cards for local and international clients.",
+                    keyActions: "Integrated UnionPay processing with POS network; coordinated certification and compliance steps; performed pilot testing with partner merchants.",
+                    impact: "Expanded VAS portfolio, improved service availability for foreign customers, and increased acquiring transaction volume.",
+                    tags: ["UnionPay", "VAS", "POS", "International Payments"]
+                  }
+                },
+                {
+                  id: 328,
+                  date: "Q4 2025",
+                  title: "🔗 Flex → CRM Module Integration",
+                  description: "Launched a process improvement initiative to integrate Flex functionality directly into CRM, unifying customer interaction and case management.",
+                  details: {
+                    objective: "Reduce handling time and improve operational efficiency within the customer support ecosystem.",
+                    keyActions: "Mapped existing Flex processes; developed integration logic; deployed unified CRM-Flex interface with automated data sync.",
+                    impact: "Reduced Average Handling Time (AHT) by 5–8%, improved agent productivity, and enhanced visibility of customer requests.",
+                    tags: ["Flex", "CRM", "Integration", "Operational Efficiency"]
+                  }
+                },
+                {
+                  id: 329,
+                  date: "Q4 2025",
+                  title: "💬 RocketChat Discovery Stage in CRM",
+                  description: "Conducted discovery and feasibility analysis for integrating the RocketChat communication platform into CRM for unified digital engagement.",
+                  details: {
+                    objective: "Assess system integration requirements and potential benefits for real-time communication with customers via chat and internal channels.",
+                    keyActions: "Performed vendor workshops; defined architecture requirements; benchmarked chat support models; prepared pilot plan for CRM connection.",
+                    impact: "Improved AHT through faster response handling, increased NPS, and prepared foundation for omni-channel chat support integration.",
+                    tags: ["RocketChat", "CRM", "Integration", "Omnichannel Support"]
+                  }
+                },
+                {
+                  id: 330,
+                  date: "Q4 2025",
+                  title: "📊 CSI Implementation for All PB Branches",
+                  description: "Rolled out CSI measurement methodology for all PAŞA Bank branches, covering Q-matic queue management and service quality metrics.",
+                  details: {
+                    objective: "Monitor and improve in-branch customer satisfaction through automated CSI surveys and data visualization.",
+                    keyActions: "Created CSI survey template for Q-matic; integrated automatic survey triggers post-service; built live Grafana dashboard for CSI tracking.",
+                    impact: "Achieved CSI 60%, increased service quality consistency, and enabled data-driven branch performance management.",
+                    tags: ["CSI", "Branches", "Grafana", "Service Quality"]
+                  }
+                },
+                {
+                  id: 331,
+                  date: "Q4 2025",
+                  title: "📱 NPS & CSI Implementation for Retail and Private Apps",
+                  description: "Created and launched NPS and CSI methodologies for Retail and Private Banking mobile apps to measure user satisfaction and service perception.",
+                  details: {
+                    objective: "Establish feedback loops for new customer segments and enable continuous monitoring of digital experience.",
+                    keyActions: "Defined survey logic per segment; embedded surveys into apps; automated data collection and reporting dashboards.",
+                    impact: "Achieved CSI 79% and NPS 60%, improving insight quality and guiding app experience improvements.",
+                    tags: ["NPS", "CSI", "Mobile Apps", "Digital Experience"]
+                  }
+                },
+                {
+                  id: 332,
+                  date: "Q4 2025",
+                  title: "💡 Financial Health Check Module (FutureLab Project)",
+                  description: "Developed a new Financial Health Check module under the FutureLab innovation initiative to analyze SME financial stability and credit readiness.",
+                  details: {
+                    objective: "Enable customers to self-assess financial health and reduce rejected credit applications through data-driven insights.",
+                    keyActions: "Designed scoring logic and UI; integrated with credit application flow; collaborated with FutureLab team for pilot testing.",
+                    impact: "Reduced rejected credit requests and improved CSI through proactive guidance and financial literacy support.",
+                    tags: ["FutureLab", "Financial Health", "SME", "Innovation"]
+                  }
                 }
             ],
             'Client Feedbacks': [
                 {
-                    id: 401,
-                    date: "Q1 2024",
-                    title: "🎓 Training Academy",
-                    description: "Established Customer Excellence Academy with comprehensive training programs for all team members.",
-                    details: {
-                        objective: "Create comprehensive training program for customer excellence",
-                        keyActions: "Developed curriculum, hired trainers, and launched academy platform",
-                        impact: "100% team participation with 95% completion rate",
-                        tags: ["Training", "Academy", "Education"]
-                    }
+                  id: 401,
+                  date: "Q1 2025",
+                  title: "📊 Voice of Customer System Assessment & Roadmap",
+                  description: "Analyzed all customer feedback collection methods and identified areas for improvement across NPS, CSI, CSAT, and Mystery Shopper programs, creating a unified roadmap for survey implementation on all channels.",
+                  details: {
+                    objective: "Evaluate and improve existing Voice of Customer systems to ensure consistent, multi-channel feedback collection.",
+                    keyActions: "Reviewed current NPS, CSI, and CSAT methodologies, analyzed Mystery Shopper insights, introduced push notification feedback, and created a roadmap for survey rollout across all channels.",
+                    impact: "Established the foundation for a unified VoC framework, improving data accuracy, feedback coverage, and overall customer insight quality.",
+                    tags: [ "NPS", "CSI", "CSAT", "Feedback", "CX Improvement"]
+                  }
                 },
                 {
-                    id: 402,
-                    date: "Q2 2024",
-                    title: "🏆 Certification Program",
-                    description: "Launched customer service certification program with 95% team participation and completion rate.",
-                    details: {
-                        objective: "Certify team members in customer excellence standards",
-                        keyActions: "Created certification standards, developed assessments, and launched program",
-                        impact: "95% team certified with measurable improvement in service quality",
-                        tags: ["Certification", "Standards", "Quality"]
-                    }
+                  id: 402,
+                  date: "Q2 2025",
+                  title: "📈 NPS Improvement Through Client-Driven Enhancements",
+                  description: "Increased NPS score from 59 to 69 by addressing technical issues, introducing new features, and expanding the product portfolio based on direct customer feedback.",
+                  details: {
+                    objective: "Leverage customer insights to enhance products and services, directly improving satisfaction and loyalty metrics.",
+                    keyActions: "Analyzed client feedback data to identify key pain points, resolved technical issues affecting user experience, introduced new functionalities, and expanded product offerings in response to customer needs.",
+                    impact: "Achieved a 10-point increase in NPS, improved customer perception, and strengthened the link between feedback-driven innovation and overall satisfaction.",
+                    tags: ["NPS", "Customer Feedback", "Product Improvement", "CX Enhancement", "Loyalty"]
+                  }
                 },
-                                {
-                    id: 402,
-                    date: "Q2 2024",
-                    title: "🏆 Certification Program",
-                    description: "Launched customer service certification program with 95% team participation and completion rate.",
-                    details: {
-                        objective: "Certify team members in customer excellence standards",
-                        keyActions: "Created certification standards, developed assessments, and launched program",
-                        impact: "95% team certified with measurable improvement in service quality",
-                        tags: ["Certification", "Standards", "Quality"]
-                    }
+
+                {
+                  id: 403,
+                  date: "Q3 2025",
+                  title: "🏷️ QR Integration for Branch Feedback Collection",
+                  description: "Implemented QR code connectivity on complaint boxes in all branches, allowing clients to submit feedback instantly and securely through their mobile devices.",
+                  details: {
+                    objective: "Enhance accessibility and efficiency of client feedback collection within physical branches.",
+                    keyActions: "Developed and installed unique QR codes on each complaint box, linked them to digital feedback forms, and established a centralized process for receiving and analyzing client responses.",
+                    impact: "Enabled real-time feedback submission from branches, increased participation rates, and improved visibility of customer concerns for faster follow-up.",
+                    tags: [, "Feedback", "QR Code", "Branch Experience", "Digitalization"]
+                  }
                 },
                 {
-                    id: 403,
-                    date: "Q4 2024",
-                    title: "🌟 Excellence Awards",
-                    description: "Introduced quarterly excellence awards recognizing outstanding customer service achievements.",
-                    details: {
-                        objective: "Recognize and reward exceptional customer service performance",
-                        keyActions: "Created award criteria, established nomination process, and launched recognition program",
-                        impact: "30% increase in team motivation and customer satisfaction scores",
-                        tags: ["Recognition", "Awards", "Motivation"]
-                    }
+                  id: 404,
+                  date: "Q3 2025",
+                  title: "📞 Virtual Branch Call Experience Optimization",
+                  description: "Enhanced the Virtual Branch call experience by restructuring all call sections based on post-call CSAT survey insights, achieving customer satisfaction results above 80%.",
+                  details: {
+                    objective: "Improve the quality and efficiency of Virtual Branch interactions by acting on real customer feedback.",
+                    keyActions: "Analyzed post-call CSAT survey results, identified improvement areas across all call sections, redesigned call flows, and optimized scripts and processes to align with customer expectations.",
+                    impact: "Increased CSAT scores to over 80%, improved communication quality, and enhanced the overall customer experience in Virtual Branch operations.",
+                    tags: ["Virtual Branch", "CSAT", "Customer Feedback"]
+                  }
+                },
+                {
+                  id: 405,
+                  date: "Q3 2025",
+                  title: "📲 One-Time Push Survey Launch in Digital Channels",
+                  description: "Launched one-time push surveys in digital channels to collect direct customer feedback, achieving a high response rate of over 3,000 SME client answers.",
+                  details: {
+                    objective: "Gain a deeper understanding of customer satisfaction and experience by introducing flexible, high-response digital feedback tools.",
+                    keyActions: "Designed and deployed one-time push surveys across digital channels, monitored participation rates, and ensured dynamic question flexibility to adapt to evolving customer needs.",
+                    impact: "Achieved strong engagement with over 3,000 SME responses, providing valuable insights into service quality and performance perception across digital touchpoints.",
+                    tags: ["Push Survey", "Digital Channels", "Customer Feedback", "CX Insights"]
+                  }
+                },
+                {
+                  id: 406,
+                  date: "Q4 2025",
+                  title: "🏦 CIB CSI Survey Implementation",
+                  description: "Launched the first Customer Satisfaction Index (CSI) survey for Corporate and Investment Banking (CIB) clients in collaboration with an external research vendor, with survey finalization in progress.",
+                  details: {
+                    objective: "Measure satisfaction and service quality among CIB clients to identify improvement opportunities and strengthen relationships with key corporate customers.",
+                    keyActions: "Collaborated with an external vendor to design and initiate the CIB CSI survey, defined methodology and sampling approach, and began data collection and analysis to finalize the results.",
+                    impact: "Established a dedicated CSI measurement framework for CIB clients, creating a foundation for ongoing performance tracking and targeted service enhancements.",
+                    tags: ["Customer Satisfaction", "Research", "Corporate Banking"]
+                  }
+                },
+                {
+                  id: 407,
+                  date: "Q4 2025",
+                  title: "🕵️‍♂️ Mystery Shopper Program Launch",
+                  description: "Introduced a Mystery Shopper program to evaluate real customer experiences across service channels and identify gaps in service quality and consistency.",
+                  details: {
+                    objective: "Assess service standards from a customer perspective and ensure consistent experience delivery across all touchpoints.",
+                    keyActions: "Designed evaluation criteria and scenarios, selected and trained mystery shoppers, conducted assessments across branches and digital channels, and compiled insights for improvement planning.",
+                    impact: "Provided a clear view of real customer experiences, revealed key improvement areas, and supported targeted training and process enhancements to elevate overall service quality.",
+                    tags: ["Mystery Shopper", "Service Quality", "Customer Experience"]
+                  }
                 }
+
             ],
             'Reporting Management': [
-                {
-                    id: 501,
-                    date: "Q1 2024",
-                    title: "💻 Digital Transformation",
-                    description: "Initiated comprehensive digital transformation program to modernize all customer-facing systems.",
-                    details: {
-                        objective: "Modernize technology stack for better customer experience",
-                        keyActions: "Assessed current systems, planned migration strategy, and began implementation",
-                        impact: "50% improvement in system performance and reliability",
-                        tags: ["Digital Transformation", "Modernization", "Systems"]
-                    }
-                },
-                {
-                    id: 502,
-                    date: "Q3 2024",
-                    title: "🔗 API Integration",
-                    description: "Integrated all systems through unified API platform, enabling seamless customer experience.",
-                    details: {
-                        objective: "Create unified platform for seamless system integration",
-                        keyActions: "Developed API gateway, integrated legacy systems, and implemented security protocols",
-                        impact: "90% reduction in system integration time and improved data consistency",
-                        tags: ["API", "Integration", "Platform"]
-                    }
-                },
-                {
-                    id: 503,
-                    date: "Q4 2024",
-                    title: "🚀 Innovation Lab",
-                    description: "Opened innovation lab to develop cutting-edge solutions for future customer experience challenges.",
-                    details: {
-                        objective: "Establish innovation center for future technology development",
-                        keyActions: "Set up lab facility, hired innovation team, and launched pilot projects",
-                        impact: "5 breakthrough innovations in development with potential for 200% efficiency gains",
-                        tags: ["Innovation", "R&D", "Future Tech"]
-                    }
-                }
+            {
+              id: 501,
+              date: "Q1 2025",
+              title: "📊 Reporting Infrastructure Assessment",
+              description: "Analyzed the existing reporting infrastructure, available data sources, and tools to identify improvement areas and define the foundation for unified VoC reporting.",
+              details: {
+                objective: "Evaluate current reporting systems and outline the roadmap for a centralized, data-driven VoC reporting framework.",
+                keyActions: "Reviewed all data sources, analyzed reporting workflows, assessed tool capabilities, and identified requirements for integrating VoC and support metrics.",
+                impact: "Established a clear understanding of the existing environment and built the foundation for unified, structured VoC reporting across all channels.",
+                tags: ["Reporting", "Infrastructure", "Data Analysis", "VoC Analytics"]
+              }
+            },
+            {
+              id: 502,
+              date: "Q2 2025",
+              title: "📈 Launch of Manual VoC Reporting in Canva",
+              description: "Developed and launched the first manual VoC report in Canva, consolidating data from all support channels, surveys, tickets, and projects into one visual dashboard.",
+              details: {
+                objective: "Create a comprehensive reporting foundation for VoC performance tracking across all service touchpoints.",
+                keyActions: "Collected and structured multi-source data, designed unified reporting logic, visualized KPIs and performance indicators in Canva, and introduced a consistent monthly reporting format.",
+                impact: "Laid the groundwork for centralized VoC reporting, improving visibility and alignment across teams and departments.",
+                tags: ["Reporting", "VoC Dashboard", "Canva", "Performance Tracking", "Monthly Reports"]
+              }
+            },
+            {
+              id: 503,
+              date: "Q3 2025",
+              title: "📊 Transition to Tableau-Based Dynamic VoC Reporting",
+              description: "Initiated the migration of manual Canva reports into Tableau, transforming static data views into automated, interactive dashboards covering all core VoC sections.",
+              details: {
+                objective: "Digitize and automate VoC reporting for real-time insights and reduced manual workload.",
+                keyActions: "Rebuilt key reporting sections in Tableau, connected live data sources, designed interactive dashboards, and automated KPI updates for support, survey, and ticketing data.",
+                impact: "Reduced manual report preparation time, improved accuracy, and enabled faster data-driven decisions through real-time VoC dashboards.",
+                tags: ["Tableau", "Automation", "Data Visualization", "VoC Reporting", "Analytics"]
+              }
+            },
+            {
+              id: 504,
+              date: "Q4 2025",
+              title: "🧭 Full Migration to Tableau as Central VoC Reporting Platform",
+              description: "Completed full migration of all VoC reports to Tableau, establishing a single source of truth for customer-related analytics and reporting.",
+              details: {
+                objective: "Unify all customer-related data into one platform for consistent analytics and organization-wide visibility.",
+                keyActions: "Consolidated all legacy reports, integrated remaining data sources, standardized dashboard structures, and finalized Tableau as the primary VoC reporting tool.",
+                impact: "Eliminated data fragmentation, ensured real-time insight availability, and positioned Tableau as the central hub for all VoC intelligence.",
+                tags: ["Tableau", "Reporting", "Data Integration", "VoC Analytics"]
+              }
+            },
+            {
+              id: 505,
+              date: "Q4 2025",
+              title: "📉 Churn Model Development Preparation",
+              description: "Initiated work on the churn prediction model, preparing data structures and defining analytical logic to identify at-risk customers.",
+              details: {
+                objective: "Build a data-driven foundation for predicting customer churn and enabling proactive retention strategies within the VoC framework.",
+                keyActions: "Analyzed behavioral and transactional datasets, defined model features, outlined predictive variables, and prepared data pipelines for initial churn modeling.",
+                impact: "Set the groundwork for advanced predictive analytics, enabling future automation of churn identification and customer retention initiatives.",
+                tags: ["Churn Model", "Predictive Analytics", "Customer Retention"]
+              }
+            }
             ]
         };
 
@@ -2246,11 +2921,19 @@
                 {
                     id: 2,
                     name: "Customer Experience",
-                    description: "Focused on designing and optimizing every touchpoint of the customer journey for maximum satisfaction.",
+                    description: "Focused on designing and optimizing every product of the customer journey for maximum satisfaction.",
                     employees: [
-                        { id: 4, name: "David Thompson", role: "CX Design Lead", photo: "" },
-                        { id: 5, name: "Lisa Park", role: "Journey Mapping Specialist", photo: "" },
-                        { id: 6, name: "James Wilson", role: "Experience Optimization Expert", photo: "" }
+                        { id: 4, name: "Qumral Askarzade", role: "CX Team Lead", photo: "" },
+                        { id: 5, name: "Bahram Ibishov", role: "Specialist", photo: "" },
+                        { id: 6, name: "Gullu Gocayeva", role: "Specialist", photo: "" },
+                        { id: 7, name: "Ismayil Qarayev", role: "Junior Specialist", photo: "" },
+                        { id: 8, name: "Jamila Azizli", role: "Junior Specialist", photo: "" },
+                        { id: 9, name: "Narmin Qasimova", role: "Senior Specialist", photo: "" },
+                        { id: 10, name: "Shirinov Namazov", role: "Specialist", photo: "" },
+                        { id: 11, name: "Tamilla Nagiyeva", role: "Junior Specialist", photo: "" },
+                        { id: 12, name: "Tofiq Hamishimov", role: "Specialist", photo: "" },
+                        { id: 13, name: "Yenigul Asgarova", role: "Specialist", photo: "" },
+                        { id: 14, name: "Zulfiya Ibrahimova", role: "Junior Specialist", photo: "" }
                     ]
                 },
                 {
@@ -2258,13 +2941,16 @@
                     name: "Quality Assurance & Process Excellence",
                     description: "Ensuring consistent quality standards and driving process improvements across all customer interactions.",
                     employees: [
-                        { id: 7, name: "Adila Mammadova", role: "Quality Assurance Manager", photo: "" },
-                        { id: 8, name: "Jala", role: "Process Excellence Analyst", photo: "" },
-                        { id: 9, name: "Maria Santos", role: "Quality Control Specialist", photo: "" }
+                        { id: 15, name: "Adila Mammadova", role: "Senior Specialist", photo: "" },
+                        { id: 16, name: "Jala Rajabova", role: "Specialist", photo: "" },
+                        { id: 17, name: "Shams Ismayil-Bayli", role: "Junior Specialist", photo: "" },
+                        { id: 18, name: "Aytan Pashayeva", role: "Junior Specialist", photo: "" },
                     ]
                 }
             ]
         };
+
+
 
         let nextTeamId = 4;
         let nextEmployeeId = 10;
@@ -2277,61 +2963,61 @@
                     id: 1,
                     icon: "😊",
                     title: "Client Satisfaction Improvement",
-                    description: "Through focused customer experience initiatives and process improvements, we significantly enhanced client satisfaction across all touchpoints.",
-                    metricBefore: "65%",
-                    metricAfter: "92%",
-                    metricLabel: "Customer Satisfaction",
-                    impact: "This improvement led to a 40% increase in customer retention and 25% growth in positive referrals, directly contributing to business growth."
+                      description: "Through focused customer experience initiatives and process enhancements, we achieved a significant rise in client satisfaction across all touchpoints.",
+                      metricBefore: "45",
+                      metricAfter: "60",
+                      metricLabel: "NPS",
+                      impact: "This improvement reflects a substantial boost in overall customer perception and loyalty, demonstrating the success of our service optimization and feedback-driven actions."
                 },
                 {
                     id: 2,
                     icon: "⏱️",
-                    title: "Average Handling Time Reduction",
-                    description: "Streamlined processes and enhanced training programs enabled our team to resolve customer issues more efficiently while maintaining quality.",
-                    metricBefore: "8.5 min",
-                    metricAfter: "4.2 min",
-                    metricLabel: "Average Handling Time",
-                    impact: "Reduced handling time improved agent productivity by 50% and enhanced customer experience through faster resolution times."
+                    title: "First Response Time Optimization",
+                      description: "By enhancing workflow automation and resource allocation in the SME Email support process, we dramatically reduced the average first response time.",
+                      metricBefore: "8h",
+                      metricAfter: "25m",
+                      metricLabel: "FRT",
+                      impact: "This improvement significantly increased responsiveness and client satisfaction, strengthening our reputation for prompt and effective communication."
                 },
                 {
                     id: 3,
                     icon: "🔄",
-                    title: "Process Optimization Success",
-                    description: "Comprehensive process analysis and optimization initiatives resulted in significant efficiency gains across all operational areas.",
-                    metricBefore: "23",
-                    metricAfter: "7",
-                    metricLabel: "Process Steps",
-                    impact: "Simplified processes reduced errors by 70% and improved employee satisfaction through clearer workflows and reduced complexity."
+                    title: "Time to Cash Reduction Across Lending Flows",
+                      description: "Through automation, process re-engineering, and faster approval workflows, we achieved a major reduction in time to cash across DSL, DCF, and SCF lending products.",
+                      metricBefore: "12h / 9h / 6h",
+                      metricAfter: "3h / 1h / 1h",
+                      metricLabel: "Time to Cash",
+                      impact: "Overall time to cash improved by approximately 82%, enabling clients to access funds faster and significantly enhancing operational efficiency and satisfaction."
                 },
                 {
                     id: 4,
                     icon: "📞",
-                    title: "First Call Resolution Rate",
-                    description: "Enhanced agent training and improved knowledge management systems dramatically increased our ability to resolve issues on the first contact.",
-                    metricBefore: "68%",
-                    metricAfter: "89%",
-                    metricLabel: "First Call Resolution",
-                    impact: "Higher first call resolution reduced customer effort and improved satisfaction while decreasing operational costs by 30%."
+                    title: "Average Handling Time Optimization",
+                      description: "By restructuring workflows and enhancing email management efficiency, we successfully reduced the average handling time for client inquiries.",
+                      metricBefore: "12h",
+                      metricAfter: "6h",
+                      metricLabel: "AHT (Email)",
+                      impact: "This 50% reduction in handling time increased overall productivity and improved client satisfaction by ensuring faster and more efficient case resolution."
                 },
                 {
                     id: 5,
                     icon: "🎯",
-                    title: "Quality Score Enhancement",
-                    description: "Systematic quality assurance programs and continuous improvement initiatives elevated our service quality standards to industry-leading levels.",
-                    metricBefore: "78%",
-                    metricAfter: "96%",
-                    metricLabel: "Quality Score",
-                    impact: "Exceptional quality scores positioned us as an industry leader and resulted in 15% increase in customer loyalty metrics."
+                    title: "Quality Assurance Performance Enhancement",
+                      description: "Through structured evaluation criteria, coaching initiatives, and regular performance reviews, we achieved a measurable improvement in agent performance scores across all support channels under the PAF framework.",
+                      metricBefore: "4.47",
+                      metricAfter: "4.80",
+                      metricLabel: "Average PAF Score (All Channels)",
+                      impact: "This improvement demonstrates higher service quality, consistent performance standards, and stronger accountability throughout the organization’s entire support network."Fin
                 },
                 {
                     id: 6,
                     icon: "💬",
-                    title: "Customer Complaint Reduction",
-                    description: "Proactive issue identification and resolution strategies significantly reduced the volume of customer complaints across all channels.",
-                    metricBefore: "450/month",
-                    metricAfter: "89/month",
-                    metricLabel: "Monthly Complaints",
-                    impact: "80% reduction in complaints freed up resources for proactive customer engagement and innovation initiatives."
+                    title: "Inquiry-to-Ticket Conversion Metric Implementation",
+                    description: "We introduced a new measurement framework to track the ratio of client inquiries escalating to second-line Request Handling Team (RHT) tickets, enabling better workload visibility and efficiency tracking.",
+                    metricBefore: "No metric",
+                    metricAfter: "<5%",
+                    metricLabel: "Inquiry-to-Ticket Ratio",
+                    impact: "With less than 5% of inquiries requiring escalation to RHT, this metric demonstrates strong first-line resolution capability and improved process efficiency across all support channels."
                 }
             ]
         };
@@ -3608,79 +4294,6 @@
             updateAdminVisibility();
         });
     </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'995033d665fb98f4',t:'MTc2MTU0NzIzMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><!-- OZUNET Simple Full-Page Save/Load -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  // --- Create floating buttons ---
-  const saveBtn = document.createElement("button");
-  const loadBtn = document.createElement("button");
-
-  Object.assign(saveBtn.style, {
-    position: "fixed", bottom: "20px", right: "160px",
-    zIndex: 9999, padding: "10px 18px",
-    background: "#0d6efd", color: "#fff",
-    border: "none", borderRadius: "8px",
-    cursor: "pointer", fontSize: "15px",
-    boxShadow: "0 3px 6px rgba(0,0,0,0.2)"
-  });
-  saveBtn.textContent = "💾 Download This Page";
-
-  Object.assign(loadBtn.style, {
-    position: "fixed", bottom: "20px", right: "20px",
-    zIndex: 9999, padding: "10px 18px",
-    background: "#28a745", color: "#fff",
-    border: "none", borderRadius: "8px",
-    cursor: "pointer", fontSize: "15px",
-    boxShadow: "0 3px 6px rgba(0,0,0,0.2)"
-  });
-  loadBtn.textContent = "📂 Load Saved Page";
-
-  document.body.appendChild(saveBtn);
-  document.body.appendChild(loadBtn);
-
-  // --- SAVE the entire current page ---
-  saveBtn.addEventListener("click", () => {
-    try {
-      const fileName = prompt("Enter a name for your file:", "ozunet_page.html");
-      if (!fileName) return;
-      const html = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
-      const blob = new Blob([html], { type: "text/html" });
-      const a = document.createElement("a");
-      a.href = URL.createObjectURL(blob);
-      a.download = fileName.endsWith(".html") ? fileName : fileName + ".html";
-      a.click();
-      URL.revokeObjectURL(a.href);
-      alert("✅ Page downloaded successfully!");
-    } catch (e) {
-      console.error("Download error:", e);
-      alert("❌ Could not download this page.");
-    }
-  });
-
-  // --- LOAD a previously saved page (replace everything) ---
-  loadBtn.addEventListener("click", async () => {
-    try {
-      const input = document.createElement("input");
-      input.type = "file";
-      input.accept = ".html";
-      input.click();
-
-      input.onchange = async () => {
-        const file = input.files[0];
-        if (!file) return;
-        const text = await file.text();
-        document.open();
-        document.write(text);
-        document.close();
-      };
-    } catch (e) {
-      console.error("Load error:", e);
-      alert("❌ Could not load the file.");
-    }
-  });
-});
-</script>
-<!-- /OZUNET Simple Full-Page Save/Load -->
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'995033d665fb98f4',t:'MTc2MTU0NzIzMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
