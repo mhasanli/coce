@@ -1586,10 +1586,18 @@
             .timeline-item,
             .timeline-item:nth-child(even) {
                 justify-content: flex-start;
-                padding-left: 60px;
-                padding-right: 20px;
+
+                /* reduce padding so card fits screen */
+                padding-left: 44px;   /* was 60px */
+                padding-right: 12px;  /* was 20px */
+
                 margin-bottom: 40px;
+
+                /* CRITICAL: include padding inside width */
+                box-sizing: border-box;
+                width: 100%;
             }
+
 
             .timeline-content,
             .timeline-item:nth-child(even) .timeline-content,
@@ -1600,6 +1608,13 @@
                 padding: 20px;
             }
 
+            .timeline {
+                overflow-x: hidden;
+            }
+
+            .timeline-content {
+                max-width: 100%;
+            }
 
             .timeline-dot {
                 left: 20px;
