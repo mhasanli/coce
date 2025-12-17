@@ -4,6 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Our Journey - Interactive Timeline</title>
+    <!-- 🔒 PASSWORD PROTECTION ADDED HERE -->
+  <style>
+    #password-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #password-box {
+      padding: 14px 18px;
+      border-radius: 8px;
+      border: none;
+      font-size: 18px;
+      width: 240px;
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    #password-button {
+      margin-top: 12px;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background: #16a34a;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+
+  <script>
+    function checkPassword() {
+      const correct = "ozunet2025"; // ← CHANGE PASSWORD HERE
+      const input = document.getElementById("password-box").value;
+
+      if (input === correct) {
+        document.getElementById("password-overlay").style.display = "none";
+      } else {
+        alert("Kod yanlışdır. Yenidən cəhd edin.");
+      }
+    }
+  </script>
+  <!-- 🔒 END PASSWORD PROTECTION -->
   <style>
         html, body {
           height: 100%;
