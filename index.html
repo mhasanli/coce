@@ -1832,6 +1832,14 @@
   <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
   <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
  </head>
+ 
+ <!-- 🔒 PASSWORD OVERLAY (ADD THIS BLOCK) -->
+ <div id="password-overlay">
+   <h2>Sayta giriş üçün kod tələb olunur</h2>
+   <input id="password-box" type="password" placeholder="Kodu daxil edin">
+   <button id="password-button" onclick="checkPassword()">Daxil ol</button>
+ </div>
+ <!-- 🔒 END PASSWORD OVERLAY -->
  <body><!-- Intro Section -->
   <div id="introSection" class="intro-section">
    <div class="intro-content">
